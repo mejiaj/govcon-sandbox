@@ -1,6 +1,12 @@
+// Theme settings available on settings page:
+// https://designsystem.digital.gov/documentation/settings
+//
+// Or individual component pages.
+// Ex: https://designsystem.digital.gov/components/banner
 @use "uswds-core" with (
+  //
+  // Active development settings.
+  //
   $theme-show-compile-warnings: false,
-  $theme-show-notifications: false,
-  // $theme-font-type-sans: "public-sans",
-  // $theme-body-background-color: "ink",
+  $theme-show-notifications: false
 );
