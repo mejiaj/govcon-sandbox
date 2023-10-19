@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Hi
-body:
+title:
+bodyClass: intro
 ---
 
 <div class="padding-2">
-  <p class="font-sans-3xl margin-bottom-0 text-bold">Hi.</p>
-  <p class="font-sans-3xl margin-top-1 text-light">It’s the new Sandbox, running on 11ty.</p>
+  <p class="font-sans-3xl margin-bottom-0 text-bold">Welcome!</p>
+  <p class="font-sans-3xl margin-top-1 text-light">This is the Drupal GovCon '23 sandbox, running on eleventy.</p>
 </div>
