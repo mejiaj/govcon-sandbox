@@ -9,6 +9,8 @@
     "init": "npm-run-all uswds:buildDist uswds:copyAssets",
     "serve": "npx @11ty/eleventy --serve",
     "start": "npm-run-all -p serve watch",
+    "lint:sass": "npx stylelint './src/_styles/*.{sass,scss}'",
+    "lint:sass:fix": "npx stylelint --fix './src/_styles/*.{sass,scss}'",
     "uswds:buildDist": "./build.sh",
     "uswds:buildSass": "gulp buildSass",
     "uswds:compileIcons": "gulp compileIcons",
@@ -27,6 +29,10 @@
     "@11ty/eleventy": "^2.0.1",
     "@uswds/compile": "^1.0.0",
     "npm-run-all": "^4.1.5",
-    "snyk": "^1.1234.0"
+    "prettier": "^3.0.3",
+    "snyk": "^1.1234.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "^11.0.0",
+    "stylelint-prettier": "^4.0.2"
   }
 }

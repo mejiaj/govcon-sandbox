@@ -1,0 +1,5 @@
+env:
+  browser: true
+extends: ["stylelint-prettier/recommended", "stylelint-config-standard-scss"]
+overrides: []
+rules: {}
