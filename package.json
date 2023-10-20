@@ -9,6 +9,8 @@
     "init": "npm-run-all uswds:buildDist uswds:copyAssets",
     "serve": "npx @11ty/eleventy --serve",
     "start": "npm-run-all -p serve watch",
+    "lint:sass": "npx stylelint './src/_styles/*.{sass,scss}'",
+    "lint:sass:fix": "npx stylelint --fix './src/_styles/*.{sass,scss}'",
     "uswds:buildDist": "./build.sh",
     "uswds:buildSass": "gulp buildSass",
     "uswds:compileIcons": "gulp compileIcons",
