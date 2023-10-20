@@ -5,12 +5,15 @@
 
 <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
   {% include "skipnav.html" %}
+  {% include "banner.html" %}
 
   <main id="main-content">
     <div class="grid-container">
       {{ content }}
     </div>
   </main>
+
+  {% include "identifier.html" %}
 
   <script src="{{ '/assets/js/uswds.min.js' | url }}"></script>
 </body>
