@@ -1,20 +1,10 @@
 {
   "primary": [
     {
-      "name": "Services",
-      "contents": [
-        "Product studio",
-        "Site analytics",
-        "Consultations"
-      ]
+      "name": "News"
     },
     {
-      "name": "Community",
-      "contents": [
-        "Slack",
-        "GitHub",
-        "Newsgroups and listserv"
-      ]
+      "name": "Community"
     },
     {
       "name": "Contact"
@@ -22,10 +12,10 @@
   ],
   "secondary": [
     {
-      "name": "Design principles"
+      "name": "About"
     },
     {
-      "name": "Log in"
+      "name": "Subscribe to our newsletter"
     }
   ]
 }
