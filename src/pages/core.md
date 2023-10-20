@@ -15,39 +15,53 @@ bodyClass: core
   <h3 class="margin-top-8">Challenge</h3>
   <ol class="usa-list font-sans-lg text-light">
     <li>
-      <strong>Theme settings:</strong> find background color theme settings for Banner & Identifier.
+      <strong>Theme settings:</strong> find theme settings for Banner & Identifier.
     </li>
     <li>
-      <strong>Color Tokens:</strong> use color tokens to set a unique color to Banner & Identifier.
+      <strong>Color Tokens:</strong> use color tokens to set unique background & link colors.
     </li>
     <li>
-      <strong>Accessibility:</strong> Use axe DevTools or browser tools to ensure links meet AA contrast requirements.
+      <strong>Accessibility:</strong> Ensure links meet AA contrast requirements. Use browser dev tools or axe extension.
     </li>
   </ol>
 
-  <h3>References <small>[designsystem.digital.gov]</small></h3>
+  <h3>References</h3>
   <ul class="usa-list">
     <li>
-      <a
-        class="usa-link usa-link--external"
-        href="https://designsystem.digital.gov/components/banner/">
-        Banner docs
-      </a>
+      Design system docs [designsystem.digital.gov]
+      <ul>
+        <li>
+          <a
+            class="usa-link usa-link--external"
+            href="https://designsystem.digital.gov/components/banner/">
+            Banner
+          </a>
+        </li>
+        <li>
+          <a
+            class="usa-link usa-link--external"
+            href="https://designsystem.digital.gov/components/identifier/">
+            Identifier
+          </a>
+        </li>
+        <li>
+          <a
+            class="usa-link usa-link--external"
+            href="https://designsystem.digital.gov/design-tokens/color/system-tokens/">
+            System color tokens
+          </a>
+        </li>
+      </ul>
     </li>
+
     <li>
       <a
         class="usa-link usa-link--external"
-        href="https://designsystem.digital.gov/components/identifier/">
-        Identifier docs
+        href="https://www.deque.com/axe/browser-extensions/">
+        axe devtools [deque.com]
       </a>
     </li>
-    <li>
-      <a
-        class="usa-link usa-link--external"
-        href="https://designsystem.digital.gov/design-tokens/color/system-tokens/">
-        System color tokens docs
-      </a>
-    </li>
+
   </ul>
 
 </section>
