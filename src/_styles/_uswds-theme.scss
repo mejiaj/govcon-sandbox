@@ -8,5 +8,12 @@
   // Active development settings.
   //
   $theme-show-compile-warnings: false,
-  $theme-show-notifications: false
+  $theme-show-notifications: false,
+  //
+  // Component settings
+  //
+  $theme-banner-background-color: "cyan-80v",
+  $theme-identifier-background-color: "cyan-80v",
+  $theme-identifier-primary-link-color: "cyan-10",
+  $theme-identifier-secondary-link-color: "cyan-5"
 );
