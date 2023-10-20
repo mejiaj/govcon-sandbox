@@ -27,6 +27,10 @@
     "@11ty/eleventy": "^2.0.1",
     "@uswds/compile": "^1.0.0",
     "npm-run-all": "^4.1.5",
-    "snyk": "^1.1234.0"
+    "prettier": "^3.0.3",
+    "snyk": "^1.1234.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "^11.0.0",
+    "stylelint-prettier": "^4.0.2"
   }
 }
