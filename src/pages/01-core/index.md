@@ -4,64 +4,66 @@ title:
 bodyClass: core
 ---
 
-# Core components
+<div class="grid-container">
+  <section class="usa-section">
+    <h1>Core components</h1>
 
-<section class="usa-section">
-  <h2>USA Banner & Identifier are <em>core</em> components</h2>
-  <div class="usa-intro">
-    These are the most recognizable and standardized elements of a government site.
-  </div>
+    <h2>USA Banner & Identifier are <em>core</em> components</h2>
+    <div class="usa-intro">
+      These are the most recognizable and standardized elements of a government site.
+    </div>
 
-  <h3 class="margin-top-8">Challenge</h3>
-  <ol class="usa-list font-sans-lg text-light">
-    <li>
-      <strong>Theme settings:</strong> find theme settings for Banner & Identifier.
-    </li>
-    <li>
-      <strong>Color Tokens:</strong> use color tokens to set unique background & link colors.
-    </li>
-    <li>
-      <strong>Accessibility:</strong> Ensure links meet AA contrast requirements. Use browser dev tools or axe extension.
-    </li>
-  </ol>
+    <h3 class="margin-top-8">Challenge</h3>
+    <ol class="usa-list font-sans-lg text-light">
+      <li>
+        <strong>Theme settings:</strong> find theme settings for Banner & Identifier.
+      </li>
+      <li>
+        <strong>Color Tokens:</strong> use color tokens to set unique background & link colors.
+      </li>
+      <li>
+        <strong>Accessibility:</strong> Ensure links meet AA contrast requirements. Use browser dev tools or axe extension.
+      </li>
+    </ol>
 
-  <h3>References</h3>
-  <ul class="usa-list">
-    <li>
-      Design system docs [designsystem.digital.gov]
-      <ul>
-        <li>
-          <a
-            class="usa-link usa-link--external"
-            href="https://designsystem.digital.gov/components/banner/">
-            Banner
-          </a>
-        </li>
-        <li>
-          <a
-            class="usa-link usa-link--external"
-            href="https://designsystem.digital.gov/components/identifier/">
-            Identifier
-          </a>
-        </li>
-        <li>
-          <a
-            class="usa-link usa-link--external"
-            href="https://designsystem.digital.gov/design-tokens/color/system-tokens/">
-            System color tokens
-          </a>
-        </li>
-      </ul>
-    </li>
+    <h3>References</h3>
+    <ul class="usa-list">
+      <li>
+        Design system docs [designsystem.digital.gov]
+        <ul>
+          <li>
+            <a
+              class="usa-link usa-link--external"
+              href="https://designsystem.digital.gov/components/banner/">
+              Banner
+            </a>
+          </li>
+          <li>
+            <a
+              class="usa-link usa-link--external"
+              href="https://designsystem.digital.gov/components/identifier/">
+              Identifier
+            </a>
+          </li>
+          <li>
+            <a
+              class="usa-link usa-link--external"
+              href="https://designsystem.digital.gov/design-tokens/color/system-tokens/">
+              System color tokens
+            </a>
+          </li>
+        </ul>
+      </li>
 
-    <li>
-      <a
-        class="usa-link usa-link--external"
-        href="https://www.deque.com/axe/browser-extensions/">
-        axe devtools [deque.com]
-      </a>
-    </li>
+      <li>
+        <a
+          class="usa-link usa-link--external"
+          href="https://www.deque.com/axe/browser-extensions/">
+          axe devtools [deque.com]
+        </a>
+      </li>
 
-  </ul>
+    </ul>
 
-</section>
+  </section>
+</div>
