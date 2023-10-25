@@ -12,7 +12,7 @@ bodyClass: core
     These are the most recognizable and standardized elements of a government site.
   </div>
 
-  <h3 class="margin-top-8">Exercise</h3>
+  <h3 class="margin-top-8">Challenge</h3>
   <ol class="usa-list font-sans-lg text-light">
     <li>
       <strong>Theme settings:</strong> find theme settings for Banner & Identifier.
