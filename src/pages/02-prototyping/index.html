@@ -154,8 +154,14 @@ bodyClass: prototype
           {% for item in events %}
           <div>{{ item.heading }}</div>
           <div>{{ item.description }}</div>
-          <div>{{ item.month }}</div>
-          <div>{{ item.day }}</div>
+          <!--
+            MDN on time element:
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
+            -->
+          <time datetime="{{ item.fullDate }}">
+            <span>{{ item.month }}</span>
+            <span>{{ item.day }}</span>
+          </time>
           {% endfor %}
         </section>
         <!-- /Events section -->
