@@ -30,7 +30,7 @@ bodyClass: core
     <ul class="usa-list">
       <li>
         Design system docs [designsystem.digital.gov]
-        <ul>
+        <ul class="usa-list">
           <li>
             <a
               class="usa-link usa-link--external"

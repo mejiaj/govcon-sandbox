@@ -1,9 +1,158 @@
 ---
-layout: default
+layout: multi-col
 title:
 bodyClass: prototype
 ---
 
+<section id="overview" class="usa-section">
+  <div class="grid-container">
+    <h2>Prototyping</h2>
+    <div class="usa-intro">
+      <p>Let's prototype a page using USWDS. We're going to be using:</p>
+      <ul>
+        <li>USWDS components</li>
+        <li>Theme settings</li>
+        <li>Tokens</li>
+        <li>Grid layout</li>
+        <li>Utility classes</li>
+      </ul>
+    </div>
+
+    <h3 class="margin-top-8">Exercise</h3>
+    <ol class="usa-list font-sans-lg text-light">
+      <li>Add the flag variant of USA Card to the news section.</li>
+      <li>Add default Card to the news section.</li>
+      <li>Add a headings only collection for latest blog posts section.</li>
+      <li>Add events only collection for latest blog posts section.</li>
+      <li>
+        Add a two column layout starting at
+        <code><small>tablet-lg</small></code> breakpoint. News should be in the
+        main content and the rest in the sidebar.
+      </li>
+      <li><strong>Remove instructions once finished.</strong></li>
+    </ol>
+
+    <h3>References</h3>
+    <ul class="usa-list">
+      <li>
+        <a
+          href="https://federalist-3b6ba08e-0df4-44c9-ac73-6fc193b0e19c.app.cloud.gov/preview/uswds/uswds/develop/"
+          class="usa-link usa-link--external">
+          USWDS Component library [cloud.gov pages]
+        </a>
+      </li>
+      <li>Design system docs [designsystem.digital.gov]</li>
+      <ul class="usa-list">
+        <li>
+          <a
+            href="https://designsystem.digital.gov/components/card/"
+            class="usa-link usa-link--external">
+            Card
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://designsystem.digital.gov/components/collection/"
+            class="usa-link usa-link--external"
+            >Collection
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://designsystem.digital.gov/components/tag/"
+            class="usa-link usa-link--external">
+            Tags
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://designsystem.digital.gov/utilities/layout-grid/"
+            class="usa-link usa-link--external">
+            Layout grid
+          </a>
+        </li>
+      </ul>
+    </ul>
+  </div>
+</section>
 
 {% include "hero.html" %}
 
+<div class="usa-section">
+  <div class="grid-container">
+    <!-- ! Exercise: Create a two column grid layout. -->
+    <!-- Layout must be two column on tablet-lg breakpoint. -->
+    <div class="">
+      <!-- Main content -->
+      <main id="main-content" class="">
+        <!-- News section -->
+        <section id="news">
+          <h2>Latest news</h2>
+          <!-- ! Exercise: Convert the markup below to USA Card flags. -->
+          {% for item in news %}
+          <h3>{{ item.heading }}</h3>
+          <img
+            src="{{ site.card.placeholderImage | url }}"
+            alt="A placeholder image" />
+          <p>{{ item.body }}</p>
+
+          <!-- ! Exercise: Use USA list to create an unstyled list of tags. -->
+          <!-- https://designsystem.digital.gov/components/tag/ -->
+          <div>{% for tag in item.tags %} {{ tag }} {% endfor %}</div>
+          <a href="javascript:void(0)" class="usa-button">
+            Read {{ item.cta }}
+          </a>
+          {% endfor %}
+        </section>
+        <!-- /News section -->
+      </main>
+      <!-- /Main content -->
+
+      <!-- ! Exercise: Create a smaller sidebar column. -->
+      <!-- Sidebar -->
+      <aside class="">
+        <!-- Callouts section -->
+        <section id="callouts">
+          <!-- ! Exercise: Use a utility class to change the background color of the first card. -->
+          <!-- https://designsystem.digital.gov/components/card -->
+
+          {% for item in callouts %}
+          <div>{{ item.heading }}</div>
+          <div>{{ item.body }}</div>
+          <div>{{ item.cta }}</div>
+          {% endfor %}
+        </section>
+        <!-- /Callouts section -->
+
+        <!-- Latest blog posts section -->
+        <section id="latest-blogs">
+          <h3>Latest blog posts</h3>
+
+          <!-- ! Exercise: Add headings only collection of articles. -->
+          <!-- https://designsystem.digital.gov/components/collection -->
+          {% for item in blog %}
+          <div>{{ item.heading }}</div>
+          <div>{{ item.source }}</div>
+          {% endfor %}
+        </section>
+        <!-- /Latest blog posts section -->
+
+        <!-- Events section -->
+        <section id="upcoming-events">
+          <h3>Upcoming events</h3>
+
+          <!-- ! Exercise: Add collection of calendar events. -->
+          <!-- https://designsystem.digital.gov/components/collection -->
+          {% for item in events %}
+          <div>{{ item.heading }}</div>
+          <div>{{ item.description }}</div>
+          <div>{{ item.month }}</div>
+          <div>{{ item.day }}</div>
+          {% endfor %}
+        </section>
+        <!-- /Events section -->
+      </aside>
+      <!-- /Sidebar -->
+    </div>
+  </div>
+</div>
