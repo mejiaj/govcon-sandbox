@@ -1,0 +1,20 @@
+[
+  {
+    "heading": "We choose to go to the moon.",
+    "body": "We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.",
+    "tags": ["trust", "design", "agile"],
+    "cta": "going to the moon"
+  },
+  {
+    "heading": "Spaceflight will never tolerate carelessness, incapacity, and neglect.",
+    "body": "Somewhere, somehow, we screwed up. It could have been in design, build, or test. Whatever it was, we should have caught it. We were too gung ho about the schedule and we locked out all of the problems we saw each day in our work.",
+    "tags": ["product-management", "agile", "strategy", "design"],
+    "cta": "building better"
+  },
+  {
+    "heading": "There is no strife, no prejudice, no national conflict in outer space as yet.",
+    "body": "Its hazards are hostile to us all. Its conquest deserves the best of all mankind, and its opportunity for peaceful cooperation many never come again. But why, some say, the moon? Why choose this as our goal? And they may well ask why climb the highest mountain?",
+    "tags": ["training", "standards", "accessibility", "development", "design"],
+    "cta": "avoiding conflict"
+  }
+]
