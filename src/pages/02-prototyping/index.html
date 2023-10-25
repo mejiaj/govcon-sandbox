@@ -121,9 +121,13 @@ bodyClass: prototype
           <!-- https://designsystem.digital.gov/components/card -->
 
           {% for item in callouts %}
-          <div>{{ item.heading }}</div>
-          <div>{{ item.body }}</div>
-          <div>{{ item.cta }}</div>
+          <div
+            class="callout {% if forloop.first %} callout--first {% endif %}">
+            <div>{{ item.heading }}</div>
+            <div>{{ item.body }}</div>
+            <div>{{ item.cta }}</div>
+          </div>
+
           {% endfor %}
         </section>
         <!-- /Callouts section -->
