@@ -1,0 +1,200 @@
+---
+layout: multi-col
+title:
+bodyClass: theming
+---
+
+<section id="overview" class="usa-section">
+  <div class="grid-container">
+    <h2>Prototyping</h2>
+    <div class="usa-intro">TK</div>
+
+    <h3 class="margin-top-8">Exercise</h3>
+    <ol class="usa-list font-sans-lg text-light"></ol>
+
+    <h3>References</h3>
+    <ul class="usa-list">
+      <li>
+        <a
+          href="https://federalist-3b6ba08e-0df4-44c9-ac73-6fc193b0e19c.app.cloud.gov/preview/uswds/uswds/develop/"
+          class="usa-link usa-link--external">
+          USWDS Component library [cloud.gov pages]
+        </a>
+      </li>
+      <li>
+        Design system docs [designsystem.digital.gov]
+        <ul class="usa-list">
+          <li>
+            <a
+              href="https://designsystem.digital.gov/components/card/"
+              class="usa-link usa-link--external">
+              Card
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://designsystem.digital.gov/components/collection/"
+              class="usa-link usa-link--external"
+              >Collection
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://designsystem.digital.gov/components/tag/"
+              class="usa-link usa-link--external">
+              Tags
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://designsystem.digital.gov/utilities/layout-grid/"
+              class="usa-link usa-link--external">
+              Layout grid
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ! Exercise: customize hero image. -->
+{% include "hero.html" %}
+
+<div class="usa-section">
+  <div class="grid-container">
+    <div class="grid-row grid-gap">
+      <!-- Main content -->
+      <main id="main-content" class="tablet-lg:grid-col-8">
+        <!-- News section -->
+        <section id="news">
+          <h2>Latest news</h2>
+          <!-- https://designsystem.digital.gov/components/card/ -->
+          <ul class="usa-card-group flex-column flex-no-wrap">
+            {% for item in news %}
+            <li class="usa-card usa-card--flag">
+              <div class="usa-card__container">
+                <div class="usa-card__header"><h3>{{ item.heading }}</h3></div>
+                <div class="usa-card__media">
+                  <div class="usa-card__img">
+                    <img
+                      src="{{ site.card.placeholderImage | url }}"
+                      alt="A placeholder image" />
+                  </div>
+                </div>
+                <div class="usa-card__body">
+                  <p>{{ item.body }}</p>
+                </div>
+                <div class="usa-card__footer">
+                  <!-- https://designsystem.digital.gov/components/tag/ -->
+                  <ul
+                    class="usa-list usa-list--unstyled display-inline-flex flex-align-start flex-wrap">
+                    {% for tag in item.tags %}
+                    <li class="usa-tag display-inline-block margin-bottom-05">
+                      {{ tag }}
+                    </li>
+                    {% endfor %}
+                  </ul>
+                  <a href="javascript:void(0)" class="usa-button">
+                    Read {{ item.cta }}
+                  </a>
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        <!-- /News section -->
+      </main>
+      <!-- /Main content -->
+
+      <!-- Sidebar -->
+      <aside class="tablet-lg:grid-col-4 padding-top-8">
+        <!-- Callouts section -->
+        <section id="callouts">
+          <!-- https://designsystem.digital.gov/components/card -->
+
+          <ul class="usa-card-group">
+            {% for item in callouts %}
+            <!--
+              ! Exercise: Set first card background to primary color.
+            -->
+            <li class="usa-card">
+              <div
+                class="usa-card__container {% if forloop.first %} bg-primary {% endif %}">
+                <div class="usa-card__header">{{ item.heading }}</div>
+                <div class="usa-card__body">{{ item.body }}</div>
+                <div class="usa-card__footer">
+                  <a href="javascript:void(0)" class="usa-button">
+                    {{ item.cta }}
+                  </a>
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        <!-- /Callouts section -->
+
+        <!-- Latest blog posts section -->
+        <section id="latest-blogs">
+          <h3>Latest blog posts</h3>
+
+          <!-- ! Exercise: Add headings only collection of articles. -->
+          <!-- https://designsystem.digital.gov/components/collection -->
+          <ul class="usa-collection usa-collection--condensed">
+            {% for item in blog %}
+            <li class="usa-collection__item">
+              <div class="usa-collection__body">
+                <h4 class="usa-collection__heading">{{ item.heading }}</h4>
+                <div class="usa-collection__meta">
+                  <div class="usa-collection__meta-item position-relative">
+                    <svg
+                      class="usa-icon position-relative bottom-neg-2px"
+                      aria-hidden="true"
+                      role="img">
+                      <use xlink:href={{ "/assets/img/sprite.svg#public" | url }}></use>
+                    </svg>
+                    {{ item.source }}
+                  </div>
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        <!-- /Latest blog posts section -->
+
+        <!-- Events section -->
+        <section id="upcoming-events">
+          <h3>Upcoming events</h3>
+
+          <!-- https://designsystem.digital.gov/components/collection -->
+          <ul class="usa-collection">
+            {% for item in events %}
+            <li class="usa-collection__item">
+              <div class="usa-collection__calendar-date">
+                <time datetime="{{ item.fullDate }}">
+                  <span class="usa-collection__calendar-date-month">
+                    {{ item.month }}
+                  </span>
+                  <span class="usa-collection__calendar-date-day">
+                    {{ item.day }}
+                  </span>
+                </time>
+              </div>
+              <div class="usa-collection__body">
+                <div>{{ item.heading }}</div>
+                <div>{{ item.description }}</div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+
+        </section>
+        <!-- /Events section -->
+      </aside>
+      <!-- /Sidebar -->
+    </div>
+  </div>
+</div>

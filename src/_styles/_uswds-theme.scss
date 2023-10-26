@@ -10,6 +10,10 @@
   $theme-show-compile-warnings: false,
   $theme-show-notifications: false,
   //
+  // Layout settings
+  //
+  $theme-utility-breakpoints: ("tablet-lg": true),
+  //
   // Component settings
   //
   $theme-banner-background-color: "cyan-80v",
