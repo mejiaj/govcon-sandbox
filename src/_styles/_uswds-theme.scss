@@ -5,5 +5,8 @@
 // Ex: https://designsystem.digital.gov/components/banner
 @use "uswds-core" with (
   // Active development settings.
-  $theme-show-notifications: false
+  $theme-show-notifications: false,
+  // !
+  // ! Exercise: Update Banner & Identifier colors.
+  // !
 );
