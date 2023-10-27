@@ -12,17 +12,21 @@ bodyClass: core
     These are the most recognizable and standardized elements of a government site.
   </div>
 
-  <h3 class="margin-top-8">Challenge</h3>
+  <h3 class="margin-top-8">Exercise</h3>
   <ol class="usa-list font-sans-lg text-light">
     <li>
       <strong>Theme settings:</strong> find theme settings for Banner & Identifier.
     </li>
     <li>
-      <strong>Color Tokens:</strong> use color tokens to set unique background & link colors.
+      <strong>Color Tokens:</strong> use system color tokens to set unique background & link colors.
+      <p class="text-accent-cool-darker">
+        We'll use this color(s) as our primary brand color moving forward.
+      </p>
     </li>
     <li>
       <strong>Accessibility:</strong> Ensure links meet AA contrast requirements. Use browser dev tools or axe extension.
     </li>
+
   </ol>
 
   <h3>References</h3>
