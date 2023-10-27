@@ -24,5 +24,6 @@ SASS files will be in the `/_styles` directory. Running `npm start` will also wa
 
 ### Recommended tools
 
-- [axe devtools: for a11y testing [deque.com]](https://www.deque.com/axe/browser-extensions/)
+- [VS Code Better Comments extension](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
 - [VS Code Prettier extension: linting & formatting [marketplace.visualstudio.com]](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [axe devtools: for a11y testing [deque.com]](https://www.deque.com/axe/browser-extensions/)
