@@ -19,7 +19,7 @@ bodyClass: core
       <strong>Theme settings:</strong> find theme settings for Banner & Identifier.
     </li>
     <li>
-      <strong>Color Tokens:</strong> use system color tokens to set unique background & link colors.
+      <strong>Color Tokens:</strong> use system color tokens to set unique background & link colors in <code><small>[_uswds-theme.scss]</small></code>.
       <p class="text-accent-cool-darker">
         We'll use this color(s) as our primary brand color moving forward.
       </p>
