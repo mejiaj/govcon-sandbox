@@ -4,14 +4,9 @@
 // Or individual component pages.
 // Ex: https://designsystem.digital.gov/components/banner
 @use "uswds-core" with (
-  //
   // Active development settings.
-  //
-  $theme-show-compile-warnings: false,
   $theme-show-notifications: false,
-  //
   // Component settings
-  //
   $theme-banner-background-color: "cyan-80v",
   $theme-identifier-background-color: "cyan-80v",
   $theme-identifier-primary-link-color: "cyan-10",
