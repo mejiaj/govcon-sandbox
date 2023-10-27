@@ -26,7 +26,6 @@ bodyClass: core
     <li>
       <strong>Accessibility:</strong> Ensure links meet AA contrast requirements. Use browser dev tools or axe extension.
     </li>
-
   </ol>
 
   <h3>References</h3>
@@ -57,7 +56,6 @@ bodyClass: core
         </li>
       </ul>
     </li>
-
     <li>
       <a
         class="usa-link usa-link--external"
@@ -65,7 +63,6 @@ bodyClass: core
         axe devtools [deque.com]
       </a>
     </li>
-
   </ul>
 
 </section>
