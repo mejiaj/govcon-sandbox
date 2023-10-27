@@ -3,21 +3,25 @@
 //
 // Or individual component pages.
 // Ex: https://designsystem.digital.gov/components/banner
+
+// !
+// ! Exercises:
+// ! 1. Use one of the system color defined for either banner or
+// !    identifier as your primary theme colors.
+// ! 2. Use your new primary colors to update the Banner & Identifier colors.
+// ! 3. Change the hero background image to a sample image
+// !    in the following directory `assets/project/img/hero`.
+// !
 @use "uswds-core" with (
-  //
   // Active development settings.
-  //
-  $theme-show-compile-warnings: false,
   $theme-show-notifications: false,
-  //
-  // Layout settings
-  //
-  $theme-utility-breakpoints: ("tablet-lg": true),
-  //
   // Component settings
-  //
   $theme-banner-background-color: "cyan-80v",
   $theme-identifier-background-color: "cyan-80v",
   $theme-identifier-primary-link-color: "cyan-10",
-  $theme-identifier-secondary-link-color: "cyan-5"
+  $theme-identifier-secondary-link-color: "cyan-5",
+  // Layout settings
+  $theme-utility-breakpoints: ("tablet-lg": true),
+  // ? Hero image path must be relative to compiled CSS file.
+  // $theme-hero-image: "../project/img/hero/image.webp"
 );
