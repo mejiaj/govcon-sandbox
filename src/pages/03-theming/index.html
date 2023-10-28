@@ -53,9 +53,9 @@ bodyClass: theming
                 <div class="usa-card__footer">
                   <!-- https://designsystem.digital.gov/components/tag/ -->
                   <ul
-                    class="usa-list usa-list--unstyled display-inline-flex flex-align-start flex-wrap">
+                    class="usa-list usa-list--unstyled display-flex flex-align-start flex-wrap margin-bottom-1">
                     {% for tag in item.tags %}
-                    <li class="usa-tag display-inline-block margin-bottom-05">
+                    <li class="usa-tag display-inline-block">
                       {{ tag }}
                     </li>
                     {% endfor %}
@@ -151,8 +151,10 @@ bodyClass: theming
                 </time>
               </div>
               <div class="usa-collection__body">
-                <div>{{ item.heading }}</div>
-                <div>{{ item.description }}</div>
+                <h4 class="usa-collection__heading">{{ item.heading }}</h4>
+                <p class="usa-collection__description">
+                  {{ item.description }}
+                </p>
               </div>
             </li>
             {% endfor %}
