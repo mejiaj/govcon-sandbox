@@ -4,16 +4,38 @@
 // Or individual component pages.
 // Ex: https://designsystem.digital.gov/components/banner
 
+// System colors documentation.
+// https://designsystem.digital.gov/colors/system
+
+// Theme colors documentation.
+// These settings allow us to make big UI color changes with a few adjustments.
+// https://designsystem.digital.gov/design-tokens/color/theme-tokens
+
 // !
 // ! Exercises:
+// !
 // ! 1. Use one of the system color defined for either banner or
 // !    identifier as your primary theme colors.
-// ! 2. Use your new primary colors to update the Banner & Identifier colors.
-// ! 3. Set identifier secondary links to lightest primary color.
-// ! 4. Update link focus color to use primary theme color.
-// ! 5. Change the hero background image to a sample image
-// !    in the following directory `assets/project/img/hero`.
+// !    Learn more about theme colors: https://designsystem.digital.gov/design-tokens/color/theme-tokens
 // !
+// ! 2. Use your new primary colors to update the Banner & Identifier colors.
+// !
+// ! 3. Set identifier secondary links to primary lightest color.
+// !
+// ! 4. Update focus color in links to use primary theme color.
+// !    https://designsystem.digital.gov/documentation/settings/#general-settings
+// !
+// ! 5. Add base theme color settings to match your new primary color.
+// !    The tags should reflect this new color change.
+// !
+// ! 6. Update accent theme color so hero accent matches.
+// !    Use color wheel to help: https://designsystem.digital.gov/design-tokens/color/overview/#uswds-color-wheels
+// !
+// ! 7. Change the hero background image to a sample image
+// !    in `assets/project/img/hero` directory. Use WEBP format.
+// !
+// !
+
 @use "uswds-core" with (
   // Active development settings.
   $theme-show-notifications: false,

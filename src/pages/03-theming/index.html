@@ -82,7 +82,7 @@ bodyClass: theming
           <ul class="usa-card-group">
             {% for item in callouts %}
             <!--
-              ! Exercise: Set first card background to primary color.
+              ! Exercise: Use a primary color as background for first item.
             -->
             <li class="usa-card">
               <div
@@ -92,7 +92,9 @@ bodyClass: theming
                 </div>
                 <div class="usa-card__body">{{ item.body }}</div>
                 <div class="usa-card__footer">
-                  <a href="javascript:void(0)" class="usa-button">
+                  <!-- ! Exercise: Use any button variant to modify the first callout action. -->
+                  <!-- https://designsystem.digital.gov/components/button -->
+                  <a href="javascript:void(0)" class="usa-button {% if forloop.first %} bg-red {% endif %}">
                     {{ item.cta }}
                   </a>
                 </div>
