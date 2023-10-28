@@ -4,8 +4,23 @@ title:
 bodyClass: prototype
 ---
 
-<!-- Instructions -->
-{% include "instructions/02.html" %}
+<!--
+*
+* Prototyping
+*
+* Let's prototype a page using USWDS. We're going to be using:
+* - USWDS Components
+* - Theme settings
+* - Tokens
+* - Grid layout
+* - Utility classes
+*
+*  Exercise
+* 1. Incorporate USWDS components Card and Collection into sections below.
+* 2. Add a two column layout starting at `tablet-lg` breakpoint.
+*    News content should be be in main element and the rest in aside.
+*
+-->
 
 <!-- Hero -->
 {% include "hero.html" %}
@@ -21,44 +36,59 @@ bodyClass: prototype
         <!-- News section -->
         <section id="news">
           <h2>Latest news</h2>
+
           <!-- ! Exercise: Convert the markup below to USA Card flags. -->
           <!-- https://designsystem.digital.gov/components/card/ -->
-          {% for item in news %}
-          <h3>{{ item.heading }}</h3>
-          <img
-            src="{{ site.card.placeholderImage | url }}"
-            alt="A placeholder image" />
-          <p>{{ item.body }}</p>
+          <div>
+            <!-- * The "for" loops are here to help generate multiple items. -->
+            <!-- * You don't need to modify them, but you might need to modify surrounding markup. -->
+            {% for item in news %}
+            <h3>{{ item.heading }}</h3>
+            <img
+              src="{{ site.card.placeholderImage | url }}"
+              alt="A placeholder image" />
+            <p>{{ item.body }}</p>
 
-          <!-- ! Exercise: Use an unstyled USA list for the tags. -->
-          <!-- https://designsystem.digital.gov/components/tag/ -->
-          <div>{% for tag in item.tags %} {{ tag }} {% endfor %}</div>
-          <a href="javascript:void(0)" class="usa-button">
-            Read {{ item.cta }}
-          </a>
-          {% endfor %}
+            <!-- ! Exercise: Add an unstyled USA list for the tags. -->
+            <!-- https://designsystem.digital.gov/components/tag/ -->
+            <ul>
+              {% for tag in item.tags %}
+              <!-- ! Exercise: Add tag classes below. -->
+              <li>{{ tag }}</li>
+              {% endfor %}
+            </ul>
+            <a href="javascript:void(0)" class="usa-button">
+              Read {{ item.cta }}
+            </a>
+            {% endfor %}
+          </div>
         </section>
         <!-- /News section -->
       </main>
       <!-- /Main content -->
 
-      <!-- ! Exercise: Create a smaller sidebar column. -->
       <!-- Sidebar -->
+      <!-- ! Exercise: Create a smaller sidebar column. -->
       <aside class="">
         <!-- Callouts section -->
         <section id="callouts">
-          <!-- ! Exercise: Use a utility class to change the background color of the first card. -->
-          <!-- https://designsystem.digital.gov/components/card -->
-
-          {% for item in callouts %}
-          <div
-            class="callout {% if forloop.first %} callout--first {% endif %}">
-            <div>{{ item.heading }}</div>
-            <div>{{ item.body }}</div>
-            <div>{{ item.cta }}</div>
-          </div>
-
-          {% endfor %}
+          <!-- ! Exercise: Add default card markup and classes. -->
+          <ul>
+            {% for item in callouts %}
+            <li>
+              <!-- ! Exercise: Use a utility class to change the background color of the first card. -->
+              <!-- https://designsystem.digital.gov/utilities/color/ -->
+              <div
+                class="callout {% if forloop.first %} callout--first {% endif %}">
+                <div>
+                  <h3>{{ item.heading }}</h3>
+                </div>
+                <div>{{ item.body }}</div>
+                <div>{{ item.cta }}</div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
         </section>
         <!-- /Callouts section -->
 
@@ -68,10 +98,14 @@ bodyClass: prototype
 
           <!-- ! Exercise: Add headings only collection of articles. -->
           <!-- https://designsystem.digital.gov/components/collection -->
-          {% for item in blog %}
-          <div>{{ item.heading }}</div>
-          <div>{{ item.source }}</div>
-          {% endfor %}
+          <ul>
+            {% for item in blog %}
+            <li>
+              <h4>{{ item.heading }}</h4>
+              <div>{{ item.source }}</div>
+            </li>
+            {% endfor %}
+          </ul>
         </section>
         <!-- /Latest blog posts section -->
 
@@ -81,18 +115,22 @@ bodyClass: prototype
 
           <!-- ! Exercise: Add collection of calendar events. -->
           <!-- https://designsystem.digital.gov/components/collection -->
-          {% for item in events %}
-          <div>{{ item.heading }}</div>
-          <div>{{ item.description }}</div>
-          <!--
-            MDN on time element:
-            https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
-            -->
-          <time datetime="{{ item.fullDate }}">
-            <span>{{ item.month }}</span>
-            <span>{{ item.day }}</span>
-          </time>
-          {% endfor %}
+          <ul>
+            {% for item in events %}
+            <li>
+              <h4>{{ item.heading }}</h4>
+              <div>{{ item.description }}</div>
+              <!--
+                MDN on time element:
+                https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
+              -->
+              <time datetime="{{ item.fullDate }}">
+                <span>{{ item.month }}</span>
+                <span>{{ item.day }}</span>
+              </time>
+            </li>
+            {% endfor %}
+          </ul>
         </section>
         <!-- /Events section -->
       </aside>
