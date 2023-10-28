@@ -84,7 +84,13 @@ bodyClass: prototype
                   <h3>{{ item.heading }}</h3>
                 </div>
                 <div>{{ item.body }}</div>
-                <div>{{ item.cta }}</div>
+                <div>
+                  <a
+                    href="javascript:void(0)"
+                    class="usa-button usa-button--secondary">
+                    {{ item.cta }}
+                  </a>
+                </div>
               </div>
             </li>
             {% endfor %}
@@ -101,7 +107,11 @@ bodyClass: prototype
           <ul>
             {% for item in blog %}
             <li>
-              <h4>{{ item.heading }}</h4>
+              <h4>
+                <a href="javascript:void(0)" class="usa-link">
+                  {{ item.heading }}
+                </a>
+              </h4>
               <div>{{ item.source }}</div>
             </li>
             {% endfor %}
@@ -118,7 +128,11 @@ bodyClass: prototype
           <ul>
             {% for item in events %}
             <li>
-              <h4>{{ item.heading }}</h4>
+              <h4>
+                <a href="javascript:void(0)" class="usa-link"
+                  >{{ item.heading }}</a
+                >
+              </h4>
               <div>{{ item.description }}</div>
               <!--
                 MDN on time element:
