@@ -14,38 +14,55 @@
 // !
 // ! Exercises:
 // !
-// ! 1. Use one of the system color defined for either banner or
-// !    identifier as your primary theme colors.
-// !    Learn more about theme colors: https://designsystem.digital.gov/design-tokens/color/theme-tokens
-// !
-// ! 2. Use your new primary colors to update the Banner & Identifier colors.
-// !
-// ! 3. Set identifier secondary links to primary lightest color.
-// !
-// ! 4. Update focus color in links to use primary theme color.
-// !    https://designsystem.digital.gov/documentation/settings/#general-settings
-// !
-// ! 5. Add base theme color settings to match your new primary color.
-// !    The tags should reflect this new color change.
-// !
-// ! 6. Update accent theme color so hero accent matches.
-// !    Use color wheel to help: https://designsystem.digital.gov/design-tokens/color/overview/#uswds-color-wheels
-// !
-// ! 7. Change the hero background image to a sample image
-// !    in `assets/project/img/hero` directory. Use WEBP format.
+
 // !
 // !
 
 @use "uswds-core" with (
   // Active development settings.
   $theme-show-notifications: false,
-  // Component settings
-  $theme-banner-background-color: "cyan-80v",
-  $theme-identifier-background-color: "cyan-80v",
-  $theme-identifier-primary-link-color: "cyan-10",
-  $theme-identifier-secondary-link-color: "cyan-5",
   // Layout settings
   $theme-utility-breakpoints: ("tablet-lg": true),
-  // ? Hero image path must be relative to compiled CSS file.
-  // $theme-hero-image: "../project/img/hero/image.webp"
+  // Primary colors
+  $theme-color-primary-family: "cyan",
+  $theme-color-primary-lightest: "cyan-5",
+  $theme-color-primary-lighter: "cyan-10",
+  $theme-color-primary-light: "cyan-30",
+  $theme-color-primary: "cyan-60",
+  $theme-color-primary-vivid: "cyan-60v",
+  $theme-color-primary-dark: "cyan-70v",
+  $theme-color-primary-darker: "cyan-80v",
+  // Base colors
+  $theme-color-base-family: "gray-cool",
+  $theme-color-base-lightest: "gray-cool-5",
+  $theme-color-base-lighter: "gray-cool-10",
+  $theme-color-base-light: "gray-cool-30",
+  $theme-color-base: "gray-cool-50",
+  $theme-color-base-dark: "gray-cool-60",
+  $theme-color-base-darker: "gray-cool-70",
+  $theme-color-base-darkest: "gray-cool-80",
+  $theme-color-base-ink: "gray-cool-80",
+  // Link focus color
+  $theme-focus-color: "primary-light",
+  // Accent colors
+  $theme-color-accent-cool-family: "mint-cool",
+  $theme-color-accent-cool-lightest: "mint-cool-5",
+  $theme-color-accent-cool-lighter: "mint-cool-10",
+  $theme-color-accent-cool-light: "mint-cool-20",
+  $theme-color-accent-cool: "mint-cool-30",
+  $theme-color-accent-cool-dark: "mint-cool-50",
+  $theme-color-accent-cool-darker: "mint-cool-60",
+  $theme-color-accent-cool-darkest: "mint-cool-70",
+  // Component settings
+  //
+  // Banner
+  $theme-banner-background-color: "primary-darker",
+  // Identifier
+  $theme-identifier-background-color: "primary-darker",
+  $theme-identifier-primary-link-color: "primary-lighter",
+  $theme-identifier-secondary-link-color: "primary-lightest",
+  // Hero
+  // Image path must be relative to compiled CSS file.
+  $theme-hero-image:
+    "../project/img/hero/kristaps-ungurs-9aEILfISeAg-unsplash.webp"
 );
