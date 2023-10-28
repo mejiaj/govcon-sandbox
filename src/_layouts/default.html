@@ -7,12 +7,20 @@
       {% include "skipnav.html" %} {% include "banner.html" %}
 
       <div class="sticky-footer-wrapper__body">
-        {% include "header--extended.html" %}
+        <!-- Header -->
+        {% unless page.layout == multi-col %} {% include "header--extended.html"
+        %} {% endunless %}
+
         <!-- Content block -->
         <main id="main-content">{{ content }}</main>
       </div>
 
-      {% include "footer--slim.html" %} {% include "identifier.html" %}
+      <!-- Footer -->
+      {% unless page.layout == multi-col %} {% include "footer--slim.html" %} {%
+      endunless %}
+
+      <!-- Identifier -->
+      {% include "identifier.html" %}
     </div>
 
     <script src="{{ '/assets/js/uswds.min.js' | url }}"></script>
