@@ -16,5 +16,23 @@
     "body": "Its hazards are hostile to us all. Its conquest deserves the best of all mankind, and its opportunity for peaceful cooperation many never come again. But why, some say, the moon? Why choose this as our goal? And they may well ask why climb the highest mountain?",
     "tags": ["training", "standards", "accessibility", "development", "design"],
     "cta": "avoiding conflict"
+  },
+  {
+    "heading": "The most significant things",
+    "body": "When we think about Apollo, is that it has opened for us, for us being the World, a challenge of the future.",
+    "tags": ["analytics", "metrics"],
+    "cta": "going to the moon"
+  },
+  {
+    "heading": "Principles of relativity",
+    "body": "The principle of relativity states that all inertial systems are \"created equal\": the laws of physics are the same as long as they are formulated with respect to an inertial frame.",
+    "tags": ["api", "data", "innovation", "challenges"],
+    "cta": "building better"
+  },
+  {
+    "heading": "Fundamental concepts",
+    "body": "The fundamental concepts of classical physics, space, time, mass, and derived concepts, velocity, momentum, force, angular momentum, energy.",
+    "tags": ["crowdsourcing", "science", "cloud", "development", "open source"],
+    "cta": "fundamentals"
   }
 ]
