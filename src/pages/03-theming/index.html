@@ -86,7 +86,7 @@ bodyClass: theming
             -->
             <li class="usa-card">
               <div
-                class="usa-card__container {% if forloop.first %} bg-primary {% endif %}">
+                class="usa-card__container {% if forloop.first %} updateClass {% endif %}">
                 <div class="usa-card__header">
                   <h3 class="usa-card__heading">{{ item.heading }}</h3>
                 </div>
@@ -94,7 +94,7 @@ bodyClass: theming
                 <div class="usa-card__footer">
                   <!-- ! Exercise: Use any button variant to modify the first callout action. -->
                   <!-- https://designsystem.digital.gov/components/button -->
-                  <a href="javascript:void(0)" class="usa-button {% if forloop.first %} bg-red {% endif %}">
+                  <a href="javascript:void(0)" class="usa-button usa-button--outline {% if forloop.first %} updateClass {% endif %}">
                     {{ item.cta }}
                   </a>
                 </div>
@@ -115,7 +115,11 @@ bodyClass: theming
             {% for item in blog %}
             <li class="usa-collection__item">
               <div class="usa-collection__body">
-                <h4 class="usa-collection__heading">{{ item.heading }}</h4>
+                <h4 class="usa-collection__heading">
+                  <a href="javascript:void(0)" class="usa-link">
+                    {{ item.heading }}
+                  </a>
+                </h4>
                 <div class="usa-collection__meta">
                   <div class="usa-collection__meta-item position-relative">
                     <svg
@@ -153,7 +157,11 @@ bodyClass: theming
                 </time>
               </div>
               <div class="usa-collection__body">
-                <h4 class="usa-collection__heading">{{ item.heading }}</h4>
+                <h4 class="usa-collection__heading">
+                  <a href="javascript:void(0)" class="usa-link">
+                    {{ item.heading }}
+                  </a>
+                </h4>
                 <p class="usa-collection__description">
                   {{ item.description }}
                 </p>
