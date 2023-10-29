@@ -1,5 +1,8 @@
 {
   "title": "Drupal GovCon Sandbox",
   "url": "",
-  "description": ""
+  "description": "",
+  "card": {
+    "placeholderImage": "/assets/project/img/card/built-to-grow--alt.jpg"
+  }
 }

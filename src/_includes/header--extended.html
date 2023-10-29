@@ -47,13 +47,16 @@
         <ul class="usa-nav__secondary-links">
           {% for item in nav.secondary %}
           <li class="usa-nav__secondary-item">
-            <a href="">{{ item.name }}</a>
+            <a href="javascript:void(0)">{{ item.name }}</a>
           </li>
           {% endfor %}
         </ul>
         {% endif %}
 
-        <form class="usa-search usa-search--small" role="search">
+        <form
+          class="usa-search usa-search--small"
+          role="search" action="javascript:void(0);"
+        >
           <label class="usa-sr-only" for="extended-search-field-en-small">
             Search
           </label>
