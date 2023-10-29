@@ -51,10 +51,10 @@ bodyClass: prototype
 
             <!-- ! Exercise: Add an unstyled USA list for the tags. -->
             <!-- https://designsystem.digital.gov/components/tag/ -->
-            <ul id="example-tags">
+            <ul id="example-list">
               {% for tag in item.tags %}
               <!-- ! Exercise: Add tag classes below. -->
-              <li>{{ tag }}</li>
+              <li class="example-tags">{{ tag }}</li>
               {% endfor %}
             </ul>
             <a href="javascript:void(0)" class="usa-button">
