@@ -2,6 +2,7 @@
 layout: default
 title:
 bodyClass: core
+permalink: /01/
 ---
 
 # Core components
