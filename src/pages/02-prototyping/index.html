@@ -39,7 +39,7 @@ bodyClass: prototype
 
           <!-- ! Exercise: Convert the markup below to USA Card flags. -->
           <!-- https://designsystem.digital.gov/components/card/ -->
-          <div>
+          <div id="example-card-flag">
             <!-- * The "for" loops are here to help generate multiple items. -->
             <!-- * You don't need to modify them, but you might need to modify surrounding markup. -->
             {% for item in news %}
@@ -51,7 +51,7 @@ bodyClass: prototype
 
             <!-- ! Exercise: Add an unstyled USA list for the tags. -->
             <!-- https://designsystem.digital.gov/components/tag/ -->
-            <ul>
+            <ul id="example-tags">
               {% for tag in item.tags %}
               <!-- ! Exercise: Add tag classes below. -->
               <li>{{ tag }}</li>
@@ -69,11 +69,11 @@ bodyClass: prototype
 
       <!-- Sidebar -->
       <!-- ! Exercise: Create a smaller sidebar column. -->
-      <aside class="">
+      <aside class="example-card-default">
         <!-- Callouts section -->
         <section id="callouts">
           <!-- ! Exercise: Add default card markup and classes. -->
-          <ul>
+          <ul id="card-default-example">
             {% for item in callouts %}
             <li>
               <!-- ! Exercise: Use a utility class to change the background color of the first card. -->
@@ -104,7 +104,7 @@ bodyClass: prototype
 
           <!-- ! Exercise: Add headings only collection of articles. -->
           <!-- https://designsystem.digital.gov/components/collection -->
-          <ul>
+          <ul id="example-collection-headers">
             {% for item in blog %}
             <li>
               <h4>
@@ -125,7 +125,7 @@ bodyClass: prototype
 
           <!-- ! Exercise: Add collection of calendar events. -->
           <!-- https://designsystem.digital.gov/components/collection -->
-          <ul>
+          <ul id="example-collection-events">
             {% for item in events %}
             <li>
               <h4>
