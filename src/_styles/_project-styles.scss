@@ -1,14 +1,3 @@
 @use "uswds-core" as *;
 
-html,
-body {
-  height: 100%;
-}
-
-// MDN Sticky footer techniques:
-// https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers
-.sticky-footer-wrapper {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
+@forward "global/sticky-footer";
