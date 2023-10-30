@@ -50,7 +50,7 @@ The logic below **only** adds a class to the first item in the loop. This is whe
 
 **Branch:** `01-core-components`
 
-**URL:** TK
+**URL:** http://localhost:8080/01/
 
 USA Banner & Identifier are _core_ components. These are the most recognizable and standardized elements of a government site.
 
@@ -68,7 +68,7 @@ USA Banner & Identifier are _core_ components. These are the most recognizable a
 
 **Branch:** `02-prototyping`
 
-**URL:** TK
+**URL:** http://localhost:8080/02/
 
 Prototype a page using USWDS. We're going to be using: USWDS Components, Theme settings, Tokens, Grid layout, and Utility classes.
 
@@ -92,7 +92,7 @@ Prototype a page using USWDS. We're going to be using: USWDS Components, Theme s
 
 **Branch:** `03-theming`
 
-**URL:** TK
+**URL:** http://localhost:8080/03/
 
 Now that we have structure and basic theming setup. Let's start customizing and applying our "brand" colors.
 
@@ -111,7 +111,7 @@ Now that we have structure and basic theming setup. Let's start customizing and 
 
 **Branch:** `04-beyond`
 
-**URL:** TK
+**URL:** http://localhost:8080/04/
 
 Here we're going to refine our design customize some components.
 
