@@ -4,7 +4,14 @@
 
   <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
     <div class="sticky-footer-wrapper">
-      {% include "skipnav.html" %} {% include "banner.html" %}
+      {% include "skipnav.html" %}
+
+      <!-- Modified language selector -->
+      <!-- @TODO Enable for 04. -->
+      {% # include "language-selector--multilingual.html" %}
+
+      <!-- Banner -->
+      {% include "banner.html" %}
 
       <div class="sticky-footer-wrapper__body">
         {% include "header--extended.html" %}
