@@ -1,0 +1,74 @@
+@use "uswds-core" as *;
+
+//
+// HTML Structure:
+// nav.dgc-nav
+//  ol.dgc-nav__items
+//    li.dgc-nav__item
+//      a.dgc-nav__link
+//
+
+// Font family utilties.
+// https://designsystem.digital.gov/utilities/font-size-and-family/#utility-mixins-2
+
+// Text weight utility.
+// https://designsystem.digital.gov/utilities/text-styles
+
+// Border radius.
+// https://designsystem.digital.gov/utilities/border/#utility-radius
+
+.dgc-nav {
+  @include u-font("sans", "lg");
+  @include u-text("light");
+  @include u-radius("lg");
+  // @include u-radius("pill");
+  background-color: color("mint-5");
+  padding-left: units(2);
+  padding-right: units(2);
+
+  // Prevents us from setting for mobile and reset on tablet.
+  // https://designsystem.digital.gov/design-tokens/spacing-units
+  @include at-media-max("tablet") {
+    @include u-padding-y(2);
+  }
+
+  @include at-media("tablet") {
+    @include u-font("sans", "2xl");
+  }
+}
+
+.dgc-nav__items {
+  @include unstyled-list;
+  // @include grid-container;
+
+  @include at-media("tablet") {
+    display: flex;
+    flex-flow: row;
+    column-gap: units(4);
+  }
+}
+
+.dgc-nav__item {
+  @include at-media-max("tablet") {
+    &:first-child .dgc-nav__link {
+      padding-top: 0;
+    }
+
+    &:last-child .dgc-nav__link {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.dgc-nav__link {
+  @include u-padding(2);
+  color: color("mint-70v");
+  display: inline-flex;
+  text-decoration-thickness: units(2px);
+  text-underline-offset: units("05");
+
+  &:hover,
+  &:focus {
+    color: color("mint-50v");
+  }
+}
