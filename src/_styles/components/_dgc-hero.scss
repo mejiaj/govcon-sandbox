@@ -1,0 +1,18 @@
+@use "uswds-core" as *;
+
+.dgc-hero {
+  text-align: center;
+
+  @include at-media("tablet-lg") {
+    text-align: end;
+  }
+
+  h1 {
+    @include u-font('sans', '3xl');
+  }
+
+  img {
+    max-height: 25rem;
+    object-fit: cover;
+  }
+}
