@@ -1,0 +1,38 @@
+@use "uswds-core" as *;
+
+.dgc-language-selector {
+  margin-top: units(1);
+
+  .usa-accordion__button {
+    background: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: none;
+    }
+  }
+
+  .usa-language__submenu {
+    color: color("white");
+    min-width: max-content;
+    padding: units(2);
+  }
+
+  .dgc-language-selector__filter {
+    margin-bottom: units(3);
+    max-width: none;
+  }
+
+  .dgc-language-selector__language-list {
+    list-style: none;
+    column-count: 3;
+    column-fill: balance;
+    column-gap: units(1);
+    padding-left: 0;
+  }
+
+  .usa-language__submenu-item {
+    border-top: none;
+  }
+}
