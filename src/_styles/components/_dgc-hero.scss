@@ -1,6 +1,7 @@
 @use "uswds-core" as *;
 
 .dgc-hero {
+  // Add some custom styles
   text-align: center;
 
   @include at-media("tablet-lg") {
@@ -9,10 +10,9 @@
 
   h1 {
     @include u-font('sans', '3xl');
-  }
 
-  img {
-    max-height: 25rem;
-    object-fit: cover;
+    .usa-hero__heading--alt {
+      color: color("primary")
+    }
   }
 }
