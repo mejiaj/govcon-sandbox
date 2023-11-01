@@ -1,6 +1,8 @@
 # Govcon Sandbox
 
-Based on [uswds-sandbox](https://github.com/uswds/uswds-sandbox). An eleventy site for rapid web prototyping and testing with the U.S. Web Design System (USWDS).
+Based on [uswds-sandbox [GitHub]](https://github.com/uswds/uswds-sandbox). An eleventy site for rapid web prototyping and testing with the U.S. Web Design System (USWDS).
+
+If you're interested in learning about the design system the [USWDS Tutorial [GitHub]](https://github.com/uswds/uswds-tutorial) is a fantastic resource.
 
 ## Requirements
 
@@ -20,8 +22,12 @@ SASS files will be in the `/_styles` directory. Running `npm start` will also wa
 
 ## Where things live
 
-- `_uswds-theme.scss`
-- `_project-styles.scss`
+- `_uswds-theme.scss`: override USWDS theme settings here.
+- `_project-styles.scss`: project-specific styles for custom components.
+- `project/img/hero`: Webp hero images from unsplash.
+- `project/img/hero/original`: Original JPEG, use WEBP instead.
+- `src/_includes/`: Component includes (like hero).
+- `src/_layouts/`: Layout templates.
 
 ## Exercises
 
@@ -117,6 +123,9 @@ Here we're going to refine our design customize some components.
 
 **Exercise**
 
+1. A custom hero.
+1. Creating a nav component.
+1. One method of extending language selector. We want to make a few customizations. Like remove the border, use a multi-column layout, and add some filtering.
 ## Resources
 
 - **USWDS Docs** [designsystem.digital.gov]
