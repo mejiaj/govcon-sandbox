@@ -117,6 +117,23 @@ Here we're going to refine our design customize some components.
 
 **Exercise**
 
+### Customizing hero instructions
+
+Lets create a custom hero using the base `usa-hero` styles provided by USWDS
+
+1. First, lets change the `usa-hero` class to have a custom prefix to signify it is our custom component. We’re using `dgv-hero`
+2. next, wrap the content within the `grid-container` div in a new, `grid-row`div
+3. Next, lets use responsive utility classes to update the layout of our callout. Replace `usa-hero__callout` with `margin-4 tablet-lg:grid-col`
+4. Since we’re developing with accessibility in mind, you’ll find the original heading color doesn’t have proper color contrast to the white background. Add the class `text-primary-darker` to our `h1` to darken the text to our primary darker token.
+5. Lets add an image to accompany our heading text. After the next closing div, create a new div. Use the same responsive grid column class to make ensure the layout is mobile friendly.
+6. Within the new div, create an img with the following src and alt (remember, accessibility!) `src="../assets/project/img/hero/svg/undraw_online_connection_6778.svg" alt="Illustration of people connecting via web content"`
+7. So far we’ve created and styled this component using markup alone. Lets hop into some css. Navigate to `src/_styles/components/_dgc-hero.scss`.
+8. To show off our mixins, lets move the text alignment. Center align the text using `text-align: center` within the custom hero class.
+9. Next, try using our `at-media` mixin and specify the  `"tablet-lg"` breakpoint we’ve been using thus far and set the text-align to `end` 
+******Hint:****** `@include at-media("breakpoint-name"`
+10. Target the `h1` element and use our [font size and family mixin](https://designsystem.digital.gov/utilities/font-size-and-family/) to change the font family to `sans` and increase the size.
+11. Target the nested `span` within the `h1` element and use our [color mixin](https://designsystem.digital.gov/utilities/color/) to make it visible again! Try using your primary color token.
+
 ## Resources
 
 - **USWDS Docs** [designsystem.digital.gov]
