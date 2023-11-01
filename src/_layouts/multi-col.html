@@ -6,14 +6,17 @@
     <div class="sticky-footer-wrapper">
       {% include "skipnav.html" %}
 
-      <!-- Modified language selector -->
-      <!-- @TODO Enable for 04. -->
-      {% # include "language-selector--multilingual.html" %}
-
       <!-- Banner -->
       {% include "banner.html" %}
 
       <div class="sticky-footer-wrapper__body">
+        <!-- Modified language selector -->
+        <!-- @TODO Enable for 04. -->
+        <div class="grid-container">
+          {% include "language-selector--multilingual.html" %}
+        </div>
+
+        <!-- Header -->
         {% include "header--extended.html" %}
         <!-- Content block -->
         {{ content }}
