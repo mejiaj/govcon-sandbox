@@ -130,7 +130,7 @@ Lets create a custom hero using the base `usa-hero` styles provided by USWDS.
 7. Within the new div, create an img with the following src and alt (remember, accessibility!) `src="../assets/project/img/hero/svg/undraw_online_connection_6778.svg" alt="Illustration of people connecting via web content"`.
 8. So far we’ve created and styled this component using markup alone. Lets hop into some css. Navigate to `src/_styles/components/_dgc-hero.scss`.
 9. To show off our mixins, lets move the text alignment. Center align the text using `text-align: center` within the custom hero class.
-10. Next, try using our `at-media` mixin and specify the  `"tablet-lg"` breakpoint we’ve been using thus far and set the `text-align` to `end` .**Hint:** `@include at-media("breakpoint-name") {}`.
+10. Next, try using our `at-media` mixin and specify the `"tablet-lg"` breakpoint we’ve been using thus far and set the `text-align` to `end` .**Hint:** `@include at-media("breakpoint-name") {}`.
 11. Target the `h1` element and use our [font size and family mixin](https://designsystem.digital.gov/utilities/font-size-and-family/) to change the font family to `sans` and increase the size.
 12. Target the nested `span` within the `h1` element and use our [color mixin](https://designsystem.digital.gov/utilities/color/) to make it visible again! Try using your primary color token.
 
