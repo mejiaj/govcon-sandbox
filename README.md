@@ -1,6 +1,8 @@
 # Govcon Sandbox
 
-Based on [uswds-sandbox](https://github.com/uswds/uswds-sandbox). An eleventy site for rapid web prototyping and testing with the U.S. Web Design System (USWDS).
+Based on [uswds-sandbox [GitHub]](https://github.com/uswds/uswds-sandbox). An eleventy site for rapid web prototyping and testing with the U.S. Web Design System (USWDS).
+
+If you're interested in learning about the design system the [USWDS Tutorial [GitHub]](https://github.com/uswds/uswds-tutorial) is a fantastic resource.
 
 ## Requirements
 
@@ -20,8 +22,12 @@ SASS files will be in the `/_styles` directory. Running `npm start` will also wa
 
 ## Where things live
 
-- `_uswds-theme.scss`
-- `_project-styles.scss`
+- `_uswds-theme.scss`: override USWDS theme settings here.
+- `_project-styles.scss`: project-specific styles for custom components.
+- `project/img/hero`: Webp hero images from unsplash.
+- `project/img/hero/original`: Original JPEG, use WEBP instead.
+- `src/_includes/`: Component includes (like hero).
+- `src/_layouts/`: Layout templates.
 
 ## Exercises
 
@@ -113,9 +119,30 @@ Now that we have structure and basic theming setup. Let's start customizing and 
 
 **URL:** http://localhost:8080/04/
 
-Here we're going to refine our design customize some components.
+Here we're going to refine our design customize some components. We're going to look at:
+
+1. A custom hero.
+1. A small custom nav.
+1. Extending language selector.
 
 **Exercise**
+
+### Customizing hero instructions
+
+Lets create a custom hero using the base `usa-hero` styles provided by USWDS.
+
+1. Find the hero markup at `src/_includes/hero.html`.
+2. First, lets change the `usa-hero` class to have a custom prefix to signify it is our custom component. We’re using `dgv-hero`.
+3. Next, wrap the content within the `grid-container` div in a new, `grid-row` div.
+4. Next, lets use responsive utility classes to update the layout of our callout. Replace `usa-hero__callout` with `margin-4 tablet-lg:grid-col`.
+5. Since we’re developing with accessibility in mind, you’ll find the original heading color doesn’t have proper color contrast to the white background. Add the class `text-primary-darker` to our `h1` to darken the text to our primary darker token.
+6. Lets add an image to accompany our heading text. After the next closing div, create a new div. Use the same responsive grid column class to make ensure the layout is mobile friendly.
+7. Within the new div, create an img with the following src and alt (remember, accessibility!) `src="../assets/project/img/hero/svg/undraw_online_connection_6778.svg" alt="Illustration of people connecting via web content"`.
+8. So far we’ve created and styled this component using markup alone. Lets hop into some css. Navigate to `src/_styles/components/_dgc-hero.scss`.
+9. To show off our mixins, lets move the text alignment. Center align the text using `text-align: center` within the custom hero class.
+10. Next, try using our `at-media` mixin and specify the `"tablet-lg"` breakpoint we’ve been using thus far and set the `text-align` to `end` .**Hint:** `@include at-media("breakpoint-name") {}`.
+11. Target the `h1` element and use our [font size and family mixin](https://designsystem.digital.gov/utilities/font-size-and-family/) to change the font family to `sans` and increase the size.
+12. Target the nested `span` within the `h1` element and use our [color mixin](https://designsystem.digital.gov/utilities/color/) to make it visible again! Try using your primary color token.
 
 ## Resources
 
