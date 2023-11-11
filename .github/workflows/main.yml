@@ -2,8 +2,8 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - '04-beyond'
-      
+      - "04-beyond"
+
 permissions:
   contents: write
 jobs:
