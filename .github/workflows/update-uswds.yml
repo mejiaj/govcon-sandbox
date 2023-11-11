@@ -1,0 +1,34 @@
+name: Update USWDS
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron:  "0 0 * * 0"
+
+jobs:
+  upgrade-packages:
+    name: Update USWDS from NPM
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ⚙️
+        uses: actions/setup-node@v4.0.0
+        with:
+          node-version: '20.x'
+
+      - name: Update USWDS package
+        run: npm update @uswds/uswds
+
+      - name: Commit and create PR 🔀
+        uses: peter-evans/create-pull-request@v5
+        with:
+          delete-branch: true
+          title: 'Update USWDS version [automated]'
+          branch: 'auto/update-uswds-version'
+          commit-message: 'Automated update of USWDS package'
+          
