@@ -21,18 +21,13 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="canonical" href="/03/">
   <link rel="preload" href="/assets/js/uswds.min.js" as="script">
-
-  <script defer src="/assets/project/js/language-selector.js"></script>
 </head>
 
 
   <body  class="theming" >
     <div class="sticky-footer-wrapper">
       <a class="usa-skipnav" href="#main-content">Skip to main content</a>
-
-
-      <!-- Banner -->
-      <section
+ <section
   class="usa-banner"
   aria-label="Official website of the United States government"
 >
@@ -128,148 +123,6 @@
 
 
       <div class="sticky-footer-wrapper__body">
-        <!-- Modified language selector -->
-        <!-- @TODO Enable for 04. -->
-        <div class="grid-container">
-          <!-- * Multilingual language selector. -->
-<!-- https://designsystem.digital.gov/patterns/select-a-language/selected-content -->
-<div class="dgc-language-selector usa-language-container usa-language--small">
-  <ul class="usa-language__primary usa-accordion">
-    <li class="usa-language__primary-item">
-      <button
-        class="usa-button usa-button--outline usa-accordion__button"
-        role="button"
-        aria-expanded="false"
-        aria-controls="language-options">
-        Languages
-      </button>
-      <div id="language-options" class="usa-language__submenu" hidden="true">
-        <label for="language-filter">Enter a language below</label>
-        <input id="language-filter" placeholder="Example: En" type="text" class="dgc-language-selector__filter usa-input">
-        <ul class="dgc-language-selector__language-list">
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="العربية | Arabic">
-              <span lang="ar" xml:lang="ar">
-                <strong>العربية (Arabic)</strong>
-              </span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="বাংলা | Bengali">
-              <span lang="bn" xml:lang="bn">
-                <strong>বাংলা (Bengali)</strong>
-              </span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="简体字 | Chinese (Simplified)">
-              <span lang="zh" xml:lang="zh">
-                <strong>简体字 (Chinese - Simplified)</strong>
-              </span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="繁體中文 | Chinese (Traditional)">
-              <span lang="zh" xml:lang="zh">
-                <strong>繁體中文 (Chinese - Traditional)</strong>
-              </span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="Kreyòl | Ayisyen (Haitian Creole)">
-              <span lang="ht" xml:lang="ht">
-                <strong>Kreyòl Ayisyen (Haitian Creole)</strong>
-              </span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="English">
-              <span lang="en" xml:lang="en"><strong>English</strong></span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="Español | Spanish">
-              <span lang="es" xml:lang="es"><strong>Español (Spanish)</strong></span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="Français | French">
-              <span lang="fr" xml:lang="fr"><strong>Français (French)</strong></span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="हिन्दी | Hindi">
-              <span lang="hi" xml:lang="hi">
-                <strong>हिन्दी (Hindi)</strong>
-              </span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="Italiano | Italian">
-              <span lang="it" xml:lang="it"><strong>Italiano (Italian)</strong></span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="Pусский | Russian">
-              <span lang="ru" xml:lang="ru"><strong>Pусский (Russian)</strong></span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="ភាសាខ្មែរ | Khmer">
-              <span lang="km" xml:lang="km">
-                <strong>ភាសាខ្មែរ (Khmer)</strong>
-              </span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="한국어 | Korean">
-              <span lang="ko" xml:lang="ko">
-                <strong>한국어 (Korean)</strong>
-              </span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title=" <a href="javascript:void(0)" title="Diné | Navajo">
-              <span lang="nv" xml:lang="nv"><strong>Diné (Navajo)</strong> </span>
-            </a>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="Português | Portuguese">
-              <span lang="pt" xml:lang="pt">
-                <strong>Português (Portuguese)</strong>
-              </span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="Tagalog">
-              <span lang="tl" xml:lang="tl"><strong>Tagalog</strong></span>
-            </a>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="Tiếng | Việt (Vietnamese)">
-              <span lang="vi" xml:lang="vi">
-                <strong>Tiếng Việt (Vietnamese)</strong>
-              </span>
-            </a>
-          </li>
-          <li class="usa-language__submenu-item">
-            <a href="javascript:void(0)" title="Yup'ik-Akuzipik | Yupik">
-              <span lang="ypk" xml:lang="ypk">
-                <strong>Yup'ik-Akuzipik (Yupik)</strong>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </li>
-  </ul>
-</div>
-
-        </div>
-
-        <!-- Header -->
         <div class="usa-overlay"></div>
 <header class="usa-header usa-header--extended">
   <div class="usa-navbar">
