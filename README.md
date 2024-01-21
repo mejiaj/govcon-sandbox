@@ -6,7 +6,7 @@ If you're interested in learning about the design system the [USWDS Tutorial [Gi
 
 ## Requirements
 
-- Node v18 (LTS)
+- Node 20 (LTS)
 
 ## Running code locally
 
