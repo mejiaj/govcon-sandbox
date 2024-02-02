@@ -1,0 +1,12 @@
+<ul id="example-collection-headers">
+  {% for item in blog %}
+  <li>
+    <h4>
+      <a href="javascript:void(0)" class="usa-link">
+        {{ item.heading }}
+      </a>
+    </h4>
+    <div>{{ item.source }}</div>
+  </li>
+  {% endfor %}
+</ul>

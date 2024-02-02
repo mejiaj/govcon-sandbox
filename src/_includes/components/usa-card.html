@@ -1,0 +1,22 @@
+<ul id="card-default-example">
+  {% for item in callouts %}
+  <li>
+    <!-- ! Exercise: Use a utility class to change the background color of the first card. -->
+    <!-- https://designsystem.digital.gov/utilities/color/ -->
+    <div
+      class="callout {% if forloop.first %} callout--first {% endif %}">
+      <div>
+        <h3>{{ item.heading }}</h3>
+      </div>
+      <div>{{ item.body }}</div>
+      <div>
+        <a
+          href="javascript:void(0)"
+          class="usa-button usa-button--outline">
+          {{ item.cta }}
+        </a>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
