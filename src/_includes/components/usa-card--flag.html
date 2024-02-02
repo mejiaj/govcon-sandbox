@@ -1,0 +1,33 @@
+<ul class="usa-card-group flex-column flex-no-wrap">
+  {% for item in news %}
+  <li class="usa-card usa-card--flag">
+    <div class="usa-card__container">
+      <div class="usa-card__header"><h3>{{ item.heading }}</h3></div>
+      <div class="usa-card__media">
+        <div class="usa-card__img">
+          <img
+            src="{{ site.card.placeholderImage | url }}"
+            alt="A placeholder image" />
+        </div>
+      </div>
+      <div class="usa-card__body">
+        <p>{{ item.body }}</p>
+      </div>
+      <div class="usa-card__footer">
+        <!-- https://designsystem.digital.gov/components/tag/ -->
+        <ul
+          class="usa-list usa-list--unstyled display-flex flex-align-start flex-wrap margin-bottom-1">
+          {% for tag in item.tags %}
+          <li class="usa-tag display-inline-block">
+            {{ tag }}
+          </li>
+          {% endfor %}
+        </ul>
+        <a href="javascript:void(0)" class="usa-button">
+          Read {{ item.cta }}
+        </a>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

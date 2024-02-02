@@ -1,0 +1,24 @@
+<ul class="usa-collection usa-collection--condensed">
+  {% for item in blog %}
+  <li class="usa-collection__item">
+    <div class="usa-collection__body">
+      <h4 class="usa-collection__heading">
+        <a href="javascript:void(0)" class="usa-link">
+          {{ item.heading }}
+        </a>
+      </h4>
+      <div class="usa-collection__meta">
+        <div class="usa-collection__meta-item position-relative">
+          <svg
+            class="usa-icon position-relative bottom-neg-2px"
+            aria-hidden="true"
+            role="img">
+            <use xlink:href={{ "/assets/img/sprite.svg#public" | url }}></use>
+          </svg>
+          {{ item.source }}
+        </div>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
