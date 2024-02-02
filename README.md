@@ -65,12 +65,13 @@ USA Banner & Identifier are _core_ components. These are the most recognizable a
 > [!NOTE]
 > We'll be using one of the selected system color tokens as our primary brand color moving forward.
 
-#### Add Core Components: USA Banner & Identifier
+#### Core Components: USA Banner & Identifier
 
-1. Review variants of [USA Banner](https://designsystem.digital.gov/components/banner/) & [Identifier](https://designsystem.digital.gov/components/identifier/).
+1. Review variants of USA [Banner](https://designsystem.digital.gov/components/banner/) & [Identifier](https://designsystem.digital.gov/components/identifier/).
 1. Find component theme settings for each.
-1. Use [system color tokens](https://designsystem.digital.gov/colors/system) to set unique background and link colors in `_uswds-theme.scss` file.
-1. **Accessibility:** Make sure text and links meet AA contrast requirements. use browser developer tools or the deque axe extension.
+1. Go to theme settings file `_uswds-theme.scss`.
+1. Use [system color tokens](https://designsystem.digital.gov/colors/system) to set unique background and link colors in settings file.
+1. **Accessibility:** Make sure text and links meet AA contrast requirements. _Use browser developer tools or the Deque axe extension._
 
 ## 02 - Prototyping
 
@@ -78,22 +79,26 @@ USA Banner & Identifier are _core_ components. These are the most recognizable a
 
 **URL:** http://localhost:8080/02/
 
-Prototype a page using USWDS. We're going to be using: USWDS Components, Theme settings, Tokens, Grid layout, and Utility classes.
+Prototype a page using USWDS. We're going to be using: USWDS Components, theme settings, tokens, grid layout, and utility classes.
 
 ### Exercise
 
-#### Implementing USA Cards
+#### Implement USA Cards
 
+**Card flag variant**
 1. Find News section in `02-prototyping/index.html`.
 1. Find the div with the ID `example-card-flag`.
-1. Use the code example for [Flag layout card](https://designsystem.digital.gov/components/card/#flag-layout-card) to convert the news section markup.
-1. Apply utility classes to remove list styles from unordered list labelled `#example-list`.
+1. Use the code example for [Flag layout card](https://designsystem.digital.gov/components/card/#flag-layout-card) to the news section markup.
+1. Apply unstyled [list](https://designsystem.digital.gov/components/list/) component to reset list styles from the unordered list `#example-list`.
+
+**Card default**
+1. Use the [card component example](https://designsystem.digital.gov/components/tag/#component-code) to apply default card markup to the callout section list labelled `card-default-example`.
+1. Add a utility class to change the background color (_and text color if needed_).
 
 #### Nesting components
 
-1. Apply the [USA Tag markup](https://designsystem.digital.gov/components/tag/#component-code) to the list items [`example-tags`] inside example list.
-1. Use the [card component example](https://designsystem.digital.gov/components/tag/#component-code) to apply default card markup to the callout section list labelled `card-default-example`.
-1. Add a utility class to change the background color (_and text color if needed_).
+1. Go to list with class `example-tags`.
+1. Apply the [USA Tag markup](https://designsystem.digital.gov/components/tag/#component-code) to the list item.
 
 #### Implement USA Collection
 
@@ -148,7 +153,7 @@ Here we're going to refine our design customize some components. We're going to 
 
 ### Exercise
 
-#### Extending Hero
+#### Extend Hero
 
 Lets create a completely custom hero using the base `usa-hero` styles provided by USWDS.
 

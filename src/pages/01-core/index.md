@@ -27,6 +27,8 @@ permalink: /01/
     </li>
     <li>
       <strong>Accessibility:</strong> Ensure links meet AA contrast requirements. Use browser dev tools or axe extension.
+
+      <img src="{{ '/assets/project/img/docs/01-a11y.jpg' |url }}" alt="USA identifier with AXE devtools open underneath showing zero accessibility issues.">
     </li>
   </ol>
 
