@@ -1,5 +1,25 @@
+// Theme settings available on settings page:
+// https://designsystem.digital.gov/documentation/settings
+//
+// Or individual component pages.
+// Ex: https://designsystem.digital.gov/components/banner
+
+// System colors documentation.
+// https://designsystem.digital.gov/colors/system
+
+// !
+// ! Exercises:
+// !
+// ! 1. Enable the `tablet-lg` breakpoint.
+// !    https://designsystem.digital.gov/utilities/layout-grid/#variables-2
+// !
+
 @use "uswds-core" with (
+  // Active development settings.
   $theme-show-notifications: false,
-  // $theme-font-type-sans: "public-sans",
-  // $theme-body-background-color: "ink",
+  // Component settings
+  $theme-banner-background-color: "cyan-80v",
+  $theme-identifier-background-color: "cyan-80v",
+  $theme-identifier-primary-link-color: "cyan-10",
+  $theme-identifier-secondary-link-color: "cyan-5"
 );

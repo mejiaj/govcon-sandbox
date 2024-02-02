@@ -40,29 +40,30 @@ permalink: /02/
 
           <!-- ! Exercise: Convert the markup below to USA Card flags. -->
           <!-- https://designsystem.digital.gov/components/card/ -->
-          <div id="example-card-flag">
+          <ul id="example-card-flag">
             <!-- * The "for" loops are here to help generate multiple items. -->
             <!-- * You don't need to modify them, but you might need to modify surrounding markup. -->
             {% for item in news %}
-            <h3>{{ item.heading }}</h3>
-            <img
-              src="{{ site.card.placeholderImage | url }}"
-              alt="A placeholder image" />
-            <p>{{ item.body }}</p>
-
-            <!-- ! Exercise: Add an unstyled USA list for the tags. -->
-            <!-- https://designsystem.digital.gov/components/tag/ -->
-            <ul id="example-list">
-              {% for tag in item.tags %}
-              <!-- ! Exercise: Add tag classes below. -->
-              <li class="example-tags">{{ tag }}</li>
-              {% endfor %}
-            </ul>
-            <a href="javascript:void(0)" class="usa-button">
-              Read {{ item.cta }}
-            </a>
+            <li>
+              <h3>{{ item.heading }}</h3>
+              <img
+                src="{{ site.card.placeholderImage | url }}"
+                alt="A placeholder image" />
+              <p>{{ item.body }}</p>
+              <!-- ! Exercise: Add an unstyled USA list for the tags. -->
+              <!-- https://designsystem.digital.gov/components/tag/ -->
+              <ul id="example-list">
+                {% for tag in item.tags %}
+                <!-- ! Exercise: Add tag classes below. -->
+                <li class="example-tags">{{ tag }}</li>
+                {% endfor %}
+              </ul>
+              <a href="javascript:void(0)" class="usa-button">
+                Read {{ item.cta }}
+              </a>
+            </li>
             {% endfor %}
-          </div>
+          </ul>
         </section>
         <!-- /News section -->
       </main>
