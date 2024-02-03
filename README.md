@@ -176,6 +176,48 @@ Lets create a completely custom hero using the base `usa-hero` styles provided b
 1. Target the `h1` element and use our [font size and family mixin](https://designsystem.digital.gov/utilities/font-size-and-family/) to change the font family to `sans` and increase the size.
 1. Target the nested `span` within the `h1` element and use our [color mixin](https://designsystem.digital.gov/utilities/color/) to make it visible again! Try using your primary color token.
 
+#### Extending button
+
+Let's say we want a button to **really** stand out in some rare cases. For example, we want to highlight a single action on the page like a hero call to action.
+
+Button doesn't offer a [setting](https://designsystem.digital.gov/components/button/#using-the-button-component-2) to change a button background, so we'll have to layer our own variant.
+
+We'll create a custom button with a gradient background instead of a solid color. We also want to use color tokens to ensure the UI stays cohesive. Plus, as we mentioned before; color grading helps us easily manage contrast.
+
+1. Go to hero component `TK`.
+1. Add the following classes: `dgc-button dgc-button--callout`.
+1. Open styles directory `./src/_styles/components/`.
+1. Create a new partial for our custom button called `_dgc-button.scss`.
+1. Forward this new partial in `_project-styles.scss` so styles get included.
+    ```diff
+      // _project-styles.scss
+      @forward "global/sticky-footer";
+
+      @forward "components/dgc-nav";
+      @forward "components/dgc-hero";
+      + @forward "components/dgc-button";
+    ```
+1. Add `uswds-core`  so we can access core functionality, like colors and other tokens.
+    ```scss
+      // _dgc-button.scss
+      @use "uswds-core" as *;
+    ```
+1. Using any two matching color tokens; add a gradient background to `dgc-button`.
+    ```scss
+      // _dgc-button.scss
+      .dgc-button--callout {
+        background-color: color("mint-50v");
+        background-image: linear-gradient(
+          45deg,
+          #{color("mint-cool-60")} 0%,
+          #{color("mint-50v")} 45%,
+          #{color("green-warm-10v")} 100%
+        );
+      }
+    ```
+1. Add a change for interactions (hover, focus, active).
+
+
 ## Resources
 
 - **USWDS Docs** [designsystem.digital.gov]
