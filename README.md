@@ -134,14 +134,15 @@ Now that we have structure and basic theming setup. Let's start customizing and 
 
 #### Global color settings
 
-1. Modify theme setting for [focus color](https://designsystem.digital.gov/documentation/settings/#general-settings) and set to primary theme color.
-1. Add base theme color settings to match your new primary color.
+1. Find the theme setting for [focus color](https://designsystem.digital.gov/documentation/settings/#general-settings).
+1. Change the setting to use the primary theme color.
 1. Add accent theme color settings to match your new primary colors. _Hint: Use [USWDS color wheel](https://designsystem.digital.gov/design-tokens/color/overview/#uswds-color-wheels) to help_.
+1. Add base theme color settings to match your new primary color.
 
 #### Customizing Hero
 
 1. Find and update hero image theme setting. Use sample WEBP images from `assets/project/img/hero` directory.
-1. Cleanup first callout card. Fix contrast issues.
+1. Cleanup first callout card. Fix any contrast issues.
 
 ## 04 - _Beyond_
 
@@ -149,11 +150,9 @@ Now that we have structure and basic theming setup. Let's start customizing and 
 
 **URL:** http://localhost:8080/04/
 
-Here we're going to refine our design customize some components. We're going to look at:
+Here we're going to refine our design and customize components.
 
-1. A custom hero.
-1. A small custom nav.
-1. Extending language selector.
+We're going to look at: A custom hero and a small custom nav.
 
 ### Exercise
 
@@ -161,18 +160,21 @@ Here we're going to refine our design customize some components. We're going to 
 
 Lets create a completely custom hero using the base `usa-hero` styles provided by USWDS.
 
-1. Find the hero markup at `src/_includes/hero.html`.
-2. First, lets change the `usa-hero` class to have a custom prefix to signify it is our custom component. We’re using `dgv-hero`.
-3. Next, wrap the content within the `grid-container` div in a new, `grid-row` div.
-4. Next, lets use responsive utility classes to update the layout of our callout. Replace `usa-hero__callout` with `margin-4 tablet-lg:grid-col`.
-5. Since we’re developing with accessibility in mind, you’ll find the original heading color doesn’t have proper color contrast to the white background. Add the class `text-primary-darker` to our `h1` to darken the text to our primary darker token.
-6. Lets add an image to accompany our heading text. After the next closing div, create a new div. Use the same responsive grid column class to make ensure the layout is mobile friendly.
-7. Within the new div, create an img with the following src and alt (remember, accessibility!) `src="../assets/project/img/hero/svg/undraw_online_connection_6778.svg" alt="Illustration of people connecting via web content"`.
-8. So far we’ve created and styled this component using markup alone. Lets hop into some css. Navigate to `src/_styles/components/_dgc-hero.scss`.
-9. To show off our mixins, lets move the text alignment. Center align the text using `text-align: center` within the custom hero class.
-10. Next, try using our `at-media` mixin and specify the `"tablet-lg"` breakpoint we’ve been using thus far and set the `text-align` to `end` .**Hint:** `@include at-media("breakpoint-name") {}`.
-11. Target the `h1` element and use our [font size and family mixin](https://designsystem.digital.gov/utilities/font-size-and-family/) to change the font family to `sans` and increase the size.
-12. Target the nested `span` within the `h1` element and use our [color mixin](https://designsystem.digital.gov/utilities/color/) to make it visible again! Try using your primary color token.
+1. Open hero partial at `./src/_includes/hero.html`.
+1. First, modify the `usa-hero` class to have a custom prefix to signify it's our custom component. Let's use `dgc-hero`.
+1. Next, wrap the contents of  `grid-container` with a new, `grid-row` div.
+1. Add a responsive utility classes to update the layout of our callout. Replace `usa-hero__callout` with `margin-4 tablet-lg:grid-col` utility classes.
+1. Since we’re developing with accessibility in mind, you’ll find the original heading color doesn’t have proper color contrast to the white background. Add the class `text-primary-darker` to our `h1` to darken the text to our primary darker token.
+1. Add an image next to our heading text. After the next closing div, create a new div. Use the same responsive grid column class to make ensure the layout is mobile friendly.
+1. Add the following image tag in the new div:
+    ```html
+    <img src="../assets/project/img/hero/svg/undraw_online_connection_6778.svg" alt="Illustration of people connecting via web content">
+    ```
+1. So far we’ve created and styled this component using markup. Now we need to update the CSS. Go to `./src/_styles/components/_dgc-hero.scss`.
+1. Center align the text using `text-align: center` in the custom hero class, `dgc-hero`.
+1. Next, try the `at-media` mixin and with the `"tablet-lg"` breakpoint we’ve been using so far and set the `text-align` to `end` .**Hint:** `@include at-media("breakpoint-name") {}`.
+1. Target the `h1` element and use our [font size and family mixin](https://designsystem.digital.gov/utilities/font-size-and-family/) to change the font family to `sans` and increase the size.
+1. Target the nested `span` within the `h1` element and use our [color mixin](https://designsystem.digital.gov/utilities/color/) to make it visible again! Try using your primary color token.
 
 ## Resources
 
