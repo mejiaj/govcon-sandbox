@@ -2,32 +2,36 @@
 
 Based on [uswds-sandbox [GitHub]](https://github.com/uswds/uswds-sandbox). An eleventy site for rapid web prototyping and testing with the U.S. Web Design System (USWDS).
 
-If you're interested in learning about the design system the [USWDS Tutorial [GitHub]](https://github.com/uswds/uswds-tutorial) is a fantastic resource.
+The [USWDS Tutorial [GitHub]](https://github.com/uswds/uswds-tutorial) is a fantastic resource for learning how to set-up and get started.
 
 ## Requirements
 
 - Node 20 (LTS)
 
-## Running code locally
+## Running locally
 
-1. Clone repo.
-1. Run `npm install`.
+1. Clone the repo.
+1. Run `npm install` to install dependencies.
 1. Run `npm run init` to get necessary files.
 1. Run `npm start` for local environment.
-1. Visit site locally at http://localhost:8080.
+1. Visit site locally at `http://localhost:8080`.
 
-USWDS assets will be in `assets/fonts` and `assets/img`.
-
-SASS files will be in the `/_styles` directory. Running `npm start` will also watch these files and recompile when there are changes.
+Running `npm start` will also watch for changes and recompile automatically.
 
 ## Where things live
 
-- `_uswds-theme.scss`: override USWDS theme settings here.
-- `_project-styles.scss`: project-specific styles for custom components.
-- `project/img/hero`: Webp hero images from unsplash.
-- `project/img/hero/original`: Original JPEG, use WEBP instead.
-- `src/_includes/`: Component includes (like hero).
-- `src/_layouts/`: Layout templates.
+Everything lives under the `src` directory in root.
+
+- `/assets`: Mix of static assets.
+  - `/fonts, img, js`: USWDS assets, do not modify.
+  - `/project` Your custom assets here.
+    - `/img/hero`: Converted WebP hero images from unsplash.
+    - `/img/hero/original`: Original JPEG files, use WEBP instead.
+- `/_styles`: SASS styles.
+  - `_uswds-theme.scss`: Override USWDS theme settings here.
+  - `_project-styles.scss`: Custom project styles.
+- `/_includes/`: Component includes (like hero).
+- `/_layouts/`: Layout templates.
 
 ## Exercises
 
