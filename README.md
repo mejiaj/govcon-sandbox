@@ -90,8 +90,8 @@ Prototype a page using USWDS. We're going to be using: USWDS Components, theme s
 #### Implement USA Cards
 
 **Card flag variant**
-1. Find News section in `02-prototyping/index.html`.
-1. Find the div with the ID `example-card-flag`.
+1. Open page template `02-prototyping/index.html`.
+1. Go to `<div id="example-card-flag">`.
 1. Use the code example for [Flag layout card](https://designsystem.digital.gov/components/card/#flag-layout-card) to the news section markup.
 1. Apply unstyled [list](https://designsystem.digital.gov/components/list/) component to reset list styles from the unordered list `#example-list`.
 
