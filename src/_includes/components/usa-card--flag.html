@@ -7,7 +7,8 @@
         <div class="usa-card__img">
           <img
             src="{{ site.card.placeholderImage | url }}"
-            alt="A placeholder image" />
+            alt="A placeholder image"
+          />
         </div>
       </div>
       <div class="usa-card__body">
@@ -15,14 +16,7 @@
       </div>
       <div class="usa-card__footer">
         <!-- https://designsystem.digital.gov/components/tag/ -->
-        <ul
-          class="usa-list usa-list--unstyled display-flex flex-align-start flex-wrap margin-bottom-1">
-          {% for tag in item.tags %}
-          <li class="usa-tag display-inline-block">
-            {{ tag }}
-          </li>
-          {% endfor %}
-        </ul>
+        {% include "components/usa-tag.html" %}
         <a href="javascript:void(0)" class="usa-button">
           Read {{ item.cta }}
         </a>

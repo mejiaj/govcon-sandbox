@@ -6,20 +6,14 @@
         <span class="usa-collection__calendar-date-month">
           {{ item.month }}
         </span>
-        <span class="usa-collection__calendar-date-day">
-          {{ item.day }}
-        </span>
+        <span class="usa-collection__calendar-date-day"> {{ item.day }} </span>
       </time>
     </div>
     <div class="usa-collection__body">
       <h4 class="usa-collection__heading">
-        <a href="javascript:void(0)" class="usa-link">
-          {{ item.heading }}
-        </a>
+        <a href="javascript:void(0)" class="usa-link"> {{ item.heading }} </a>
       </h4>
-      <p class="usa-collection__description">
-        {{ item.description }}
-      </p>
+      <p class="usa-collection__description">{{ item.description }}</p>
     </div>
   </li>
   {% endfor %}

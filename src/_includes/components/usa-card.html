@@ -5,7 +5,8 @@
   -->
   <li class="usa-card">
     <div
-      class="usa-card__container {% if forloop.first %} updateClass {% endif %}">
+      class="usa-card__container {% if forloop.first %} updateClass {% endif %}"
+    >
       <div class="usa-card__header">
         <h3 class="usa-card__heading">{{ item.heading }}</h3>
       </div>
@@ -13,7 +14,10 @@
       <div class="usa-card__footer">
         <!-- ! Exercise: Use any button variant to modify the first callout action. -->
         <!-- https://designsystem.digital.gov/components/button -->
-        <a href="javascript:void(0)" class="usa-button usa-button--outline {% if forloop.first %} updateClass {% endif %}">
+        <a
+          href="javascript:void(0)"
+          class="usa-button usa-button--outline {% if forloop.first %} updateClass {% endif %}"
+        >
           {{ item.cta }}
         </a>
       </div>
