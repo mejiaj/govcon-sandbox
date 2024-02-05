@@ -11,12 +11,7 @@
     <p>{{ item.body }}</p>
     <!-- ! Exercise: Add an unstyled USA list for the tags. -->
     <!-- https://designsystem.digital.gov/components/tag/ -->
-    <ul id="example-list">
-      {% for tag in item.tags %}
-      <!-- ! Exercise: Add tag classes below. -->
-      <li class="example-tags">{{ tag }}</li>
-      {% endfor %}
-    </ul>
+    {% include "components/usa-tag.html" %}
     <a href="javascript:void(0)" class="usa-button">
       Read {{ item.cta }}
     </a>
