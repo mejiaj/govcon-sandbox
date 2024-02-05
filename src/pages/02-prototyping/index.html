@@ -38,32 +38,9 @@ permalink: /02/
         <section id="news">
           <h2>Latest news</h2>
 
-          <!-- ! Exercise: Convert the markup below to USA Card flags. -->
+          <!-- ! Exercise: Convert the component markup to USA Card flags. -->
           <!-- https://designsystem.digital.gov/components/card/ -->
-          <ul id="example-card-flag">
-            <!-- * The "for" loops are here to help generate multiple items. -->
-            <!-- * You don't need to modify them, but you might need to modify surrounding markup. -->
-            {% for item in news %}
-            <li>
-              <h3>{{ item.heading }}</h3>
-              <img
-                src="{{ site.card.placeholderImage | url }}"
-                alt="A placeholder image" />
-              <p>{{ item.body }}</p>
-              <!-- ! Exercise: Add an unstyled USA list for the tags. -->
-              <!-- https://designsystem.digital.gov/components/tag/ -->
-              <ul id="example-list">
-                {% for tag in item.tags %}
-                <!-- ! Exercise: Add tag classes below. -->
-                <li class="example-tags">{{ tag }}</li>
-                {% endfor %}
-              </ul>
-              <a href="javascript:void(0)" class="usa-button">
-                Read {{ item.cta }}
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
+          {% include "components/usa-card--flag.html" %}
         </section>
         <!-- /News section -->
       </main>
@@ -74,29 +51,8 @@ permalink: /02/
       <aside class="example-card-default">
         <!-- Callouts section -->
         <section id="callouts">
-          <!-- ! Exercise: Add default card markup and classes. -->
-          <ul id="card-default-example">
-            {% for item in callouts %}
-            <li>
-              <!-- ! Exercise: Use a utility class to change the background color of the first card. -->
-              <!-- https://designsystem.digital.gov/utilities/color/ -->
-              <div
-                class="callout {% if forloop.first %} callout--first {% endif %}">
-                <div>
-                  <h3>{{ item.heading }}</h3>
-                </div>
-                <div>{{ item.body }}</div>
-                <div>
-                  <a
-                    href="javascript:void(0)"
-                    class="usa-button usa-button--outline">
-                    {{ item.cta }}
-                  </a>
-                </div>
-              </div>
-            </li>
-            {% endfor %}
-          </ul>
+          <!-- ! Exercise: Add default card markup and classes to component partial. -->
+          {% include "components/usa-card.html" %}
         </section>
         <!-- /Callouts section -->
 
@@ -104,20 +60,9 @@ permalink: /02/
         <section id="latest-blogs">
           <h3>Latest blog posts</h3>
 
-          <!-- ! Exercise: Add headings only collection of articles. -->
+          <!-- ! Exercise: Add headings only collection of articles to component partial. -->
           <!-- https://designsystem.digital.gov/components/collection -->
-          <ul id="example-collection-headers">
-            {% for item in blog %}
-            <li>
-              <h4>
-                <a href="javascript:void(0)" class="usa-link">
-                  {{ item.heading }}
-                </a>
-              </h4>
-              <div>{{ item.source }}</div>
-            </li>
-            {% endfor %}
-          </ul>
+          {% include "components/usa-collection--headings-only.html" %}
         </section>
         <!-- /Latest blog posts section -->
 
@@ -125,28 +70,9 @@ permalink: /02/
         <section id="upcoming-events">
           <h3>Upcoming events</h3>
 
-          <!-- ! Exercise: Add collection of calendar events. -->
+          <!-- ! Exercise: Add collection of calendar events to component partial. -->
           <!-- https://designsystem.digital.gov/components/collection -->
-          <ul id="example-collection-events">
-            {% for item in events %}
-            <li>
-              <h4>
-                <a href="javascript:void(0)" class="usa-link"
-                  >{{ item.heading }}</a
-                >
-              </h4>
-              <div>{{ item.description }}</div>
-              <!--
-                MDN on time element:
-                https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
-              -->
-              <time datetime="{{ item.fullDate }}">
-                <span>{{ item.month }}</span>
-                <span>{{ item.day }}</span>
-              </time>
-            </li>
-            {% endfor %}
-          </ul>
+          {% include "components/usa-collection--calendar.html" %}
         </section>
         <!-- /Events section -->
       </aside>

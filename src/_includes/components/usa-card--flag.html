@@ -1,0 +1,20 @@
+<!-- ! Exercise: Convert the markup below to USA Card flags. -->
+<ul id="example-card-flag">
+  <!-- * The "for" loops are here to help generate multiple items. -->
+  <!-- * You don't need to modify them, but you might need to modify surrounding markup. -->
+  {% for item in news %}
+  <li>
+    <h3>{{ item.heading }}</h3>
+    <img
+      src="{{ site.card.placeholderImage | url }}"
+      alt="A placeholder image" />
+    <p>{{ item.body }}</p>
+    <!-- ! Exercise: Update tag markup in component partial. -->
+    <!-- https://designsystem.digital.gov/components/tag/ -->
+    {% include "components/usa-tag.html" %}
+    <a href="javascript:void(0)" class="usa-button">
+      Read {{ item.cta }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
