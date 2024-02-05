@@ -27,10 +27,12 @@ permalink: /02/
 {% include "hero.html" %}
 
 <div class="usa-section">
-  <div id="example-grid-row" class="grid-container">
+  <div class="grid-container">
+
     <!-- ! Exercise: Add row classes for a two column layout. -->
     <!-- https://designsystem.digital.gov/utilities/layout-grid/ -->
-    <div class="">
+    <div id="example-grid-row" class="">
+
       <!-- Main content -->
       <!-- ! Exercise: Add layout classes for main content. -->
       <main id="main-content" class="">
@@ -39,7 +41,6 @@ permalink: /02/
           <h2>Latest news</h2>
 
           <!-- ! Exercise: Convert the component markup to USA Card flags. -->
-          <!-- https://designsystem.digital.gov/components/card/ -->
           {% include "components/usa-card--flag.html" %}
         </section>
         <!-- /News section -->
@@ -48,7 +49,8 @@ permalink: /02/
 
       <!-- Sidebar -->
       <!-- ! Exercise: Create a smaller sidebar column. -->
-      <aside class="example-card-default">
+      <aside id="aside-content" class="">
+
         <!-- Callouts section -->
         <section id="callouts">
           <!-- ! Exercise: Add default card markup and classes to component partial. -->
@@ -71,7 +73,6 @@ permalink: /02/
           <h3>Upcoming events</h3>
 
           <!-- ! Exercise: Add collection of calendar events to component partial. -->
-          <!-- https://designsystem.digital.gov/components/collection -->
           {% include "components/usa-collection--calendar.html" %}
         </section>
         <!-- /Events section -->
