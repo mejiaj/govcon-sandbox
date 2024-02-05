@@ -90,29 +90,40 @@ Prototype a page using USWDS. We're going to be using: USWDS Components, theme s
 #### Implement USA Cards
 
 **Card flag variant**
-1. Open page template `02-prototyping/index.html`.
-1. Go to `<div id="example-card-flag">`.
+1. Go to `/src/_includes/components/usa-card--flag.html`.
 1. Use the code example for [Flag layout card](https://designsystem.digital.gov/components/card/#flag-layout-card) to the news section markup.
 1. Apply unstyled [list](https://designsystem.digital.gov/components/list/) component to reset list styles from the unordered list `#example-list`.
 
 **Card default**
+1. Go to `src/_includes/components/usa-card.html`.
 1. Use the [card component example](https://designsystem.digital.gov/components/tag/#component-code) to apply default card markup to the callout section list labelled `card-default-example`.
 1. Add a utility class to change the background color (_and text color if needed_).
 
 #### Nesting components
 
-1. Go to list with class `example-tags`.
+1. Go to `src/_includes/components/usa-tag.html`.
+1. Find the list with class `example-tags`.
 1. Apply the [USA Tag markup](https://designsystem.digital.gov/components/tag/#component-code) to the list item.
 
 #### Implement USA Collection
 
+**Headings only variant**
+
+1. Go to `src/_includes/components/usa-collection--headings-only.html`.
 1. Use the headings variant of collection component [code example](https://designsystem.digital.gov/components/collection/#component-code) to section labelled `example-collection-headers`.
+
+**Calendar variant**
+1. Go to `src/_includes/components/usa-collection--calendar.html`.
 1. Apply collection calendar variant [code example](https://designsystem.digital.gov/components/collection/#component-code) to section labelled `example-collection-headers`.
 
 #### Apply & Customize layout
 
-1. Finally we're going to apply layout classes. Start at the top section labelled `example-grid-row` and apply the grid row classes.
+1. Finally we're going to apply layout classes. 
+1. Open page template `02-prototyping/index.html`.
+1. Start at the top section labelled `example-grid-row` and apply the grid row classes.
 1. Apply layout grid classes to the `<main>` and `<aside>` elements to create a two column grid.
+   > [!TIP]
+   > Grid is based on a 12-column system. Two `<div class="grid-col-6">` would create two equal width columns spanning the width of the `grid-row` parent element.
 1. Use [utility settings](https://designsystem.digital.gov/utilities/layout-grid/#utilities-settings) to enable the `tablet-lg` breakpoint in [`_uswds-theme.scss`].
 1. Use [responsive variants](https://designsystem.digital.gov/utilities/layout-grid/#responsive-variants-2) to define an 8-col content section and a 4-col wide sidebar with your newly enabled breakpoint.
 
@@ -184,7 +195,7 @@ Button doesn't offer a [setting](https://designsystem.digital.gov/components/but
 
 We'll create a custom button with a gradient background instead of a solid color. We also want to use color tokens to ensure the UI stays cohesive. Plus, as we mentioned before; color grading helps us easily manage contrast.
 
-1. Go to hero component `TK`.
+1. Go to hero component `./src/_includes/hero.html`.
 1. Add the following classes: `dgc-button dgc-button--callout`.
 1. Open styles directory `./src/_styles/components/`.
 1. Create a new partial for our custom button called `_dgc-button.scss`.
