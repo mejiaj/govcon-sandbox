@@ -14,23 +14,23 @@ permalink: /01/
       These are the most recognizable and standardized elements of a government site.
     </div>
 
-  <h3 class="margin-top-8">Exercise</h3>
-  <ol class="usa-list font-sans-lg text-light">
-    <li>
-      <strong>Theme settings:</strong> find theme settings for Banner & Identifier.
-    </li>
-    <li>
-      <strong>Color Tokens:</strong> use system color tokens to set unique background & link colors in <code><small>[_uswds-theme.scss]</small></code>.
-      <p class="text-accent-cool-darker">
-        We'll use this color(s) as our primary brand color moving forward.
-      </p>
-    </li>
-    <li>
-      <strong>Accessibility:</strong> Ensure links meet AA contrast requirements. Use browser dev tools or axe extension.
+    <h3 class="margin-top-8">Exercise</h3>
+    <ol class="usa-list font-sans-lg text-light">
+      <li>
+        <strong>Theme settings:</strong> find theme settings for Banner & Identifier.
+      </li>
+      <li>
+        <strong>Color Tokens:</strong> use system color tokens to set unique background & link colors in <code><small>[_uswds-theme.scss]</small></code>.
+        <p class="text-accent-cool-darker">
+          We'll use this color(s) as our primary brand color moving forward.
+        </p>
+      </li>
+      <li>
+        <strong>Accessibility:</strong> Ensure links meet AA contrast requirements. Use browser dev tools or axe extension.
 
-      <img src="{{ '/assets/project/img/docs/01-a11y.jpg' |url }}" alt="USA identifier with AXE devtools open underneath showing zero accessibility issues.">
-    </li>
-  </ol>
+        <img src="{{ '/assets/project/img/docs/01-a11y.jpg' |url }}" alt="USA identifier with AXE devtools open underneath showing zero accessibility issues.">
+      </li>
+    </ol>
 
     <h3>References</h3>
     <ul class="usa-list">
@@ -68,6 +68,5 @@ permalink: /01/
         </a>
       </li>
     </ul>
-    </section>
-
-  </div>
+  </section>
+</div>

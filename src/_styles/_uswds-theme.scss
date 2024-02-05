@@ -7,6 +7,13 @@
 // System colors documentation.
 // https://designsystem.digital.gov/colors/system
 
+// !
+// ! Exercises:
+// !
+// ! 1. Enable the `tablet-lg` breakpoint.
+// !    https://designsystem.digital.gov/utilities/layout-grid/#variables-2
+// !
+
 @use "uswds-core" with (
   // Active development settings.
   $theme-show-notifications: false,
