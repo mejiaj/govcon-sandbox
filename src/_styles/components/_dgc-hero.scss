@@ -2,17 +2,5 @@
 
 .dgc-hero {
   // Add some custom styles
-  text-align: center;
 
-  @include at-media("tablet-lg") {
-    text-align: end;
-  }
-
-  h1 {
-    @include u-font('sans', '3xl');
-
-    .usa-hero__heading--alt {
-      color: color("primary")
-    }
-  }
 }
