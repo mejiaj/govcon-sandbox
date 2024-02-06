@@ -95,7 +95,7 @@ Prototype a page using USWDS. We're going to be using: USWDS Components, theme s
     <!-- 02-prototyping/index.html -->
     <div id="example-grid-row" class="">
     ```
-1. We're going to apply layout classes. Use [grid docs](https://designsystem.digital.gov/utilities/layout-grid/) for reference. Start at the top section labelled `example-grid-row` and apply the grid row classes `grid-row` and `grid-gap`.
+1. We're going to apply layout classes. Use [grid docs](https://designsystem.digital.gov/utilities/layout-grid/) for reference. Apply the grid row classes `grid-row` and `grid-gap`.
 1. Apply layout grid classes to the `<main>` and `<aside>` elements to create a two column grid.
     ```html
     <!-- 02-prototyping/index.html -->
