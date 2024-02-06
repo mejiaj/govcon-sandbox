@@ -1,7 +1,10 @@
 <!-- ! Exercise: Add an unstyled USA list for the tags in component partial. -->
-<ul id="example-list">
+<ul id="example-tag-list" class="">
   {% for tag in item.tags %}
-  <!-- ! Exercise: Add tag classes below. -->
+  <!--
+    ! Exercise: Add tag classes below.
+    https://designsystem.digital.gov/components/tag/
+  -->
   <li class="example-tags">{{ tag }}</li>
   {% endfor %}
 </ul>

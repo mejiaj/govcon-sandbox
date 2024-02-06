@@ -1,9 +1,14 @@
-<!-- ! Exercise: Add default card markup and classes. -->
+<!--
+  ! Exercise: Add default card markup and classes.
+  https://designsystem.digital.gov/components/tag/#component-code
+-->
 <ul id="card-default-example">
   {% for item in callouts %}
   <li>
-    <!-- ! Exercise: Use a utility class to change the background color of the first card. -->
-    <!-- https://designsystem.digital.gov/utilities/color/ -->
+    <!--
+      ! Exercise: Use a utility class to change the background color of the first card.
+      https://designsystem.digital.gov/utilities/color/
+    -->
     <div
       class="callout {% if forloop.first %} callout--first {% endif %}">
       <div>
