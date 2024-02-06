@@ -87,11 +87,33 @@ Prototype a page using USWDS. We're going to be using: USWDS Components, theme s
 
 ### Exercise
 
+#### Apply & Customize layout
+
+1. Open page template `02-prototyping/index.html`.
+1. Find div with the ID `example-grid-row`.
+    ```html
+    <!-- 02-prototyping/index.html -->
+    <div id="example-grid-row" class="">
+    ```
+1. We're going to apply layout classes. Use [grid docs](https://designsystem.digital.gov/utilities/layout-grid/) for reference. Start at the top section labelled `example-grid-row` and apply the grid row classes `grid-row` and `grid-gap`.
+1. Apply layout grid classes to the `<main>` and `<aside>` elements to create a two column grid.
+    ```html
+    <main id="main-content" class="">
+
+    <!-- Further below. -->
+    <aside id="aside-content" class="">
+    ```
+1. Go to theme settings file [`_uswds-theme.scss`].
+1. Use [utility settings](https://designsystem.digital.gov/utilities/layout-grid/#utilities-settings) to enable the `tablet-lg` breakpoint.
+1. Go back to the template `02-prototyping/index.html` and add responsive variants to your layout.
+1. Use [responsive variants](https://designsystem.digital.gov/utilities/layout-grid/#responsive-variants-2) to define an 8-col content section and a 4-col wide sidebar with your newly enabled breakpoint.
+
+
 #### Implement USA Cards
 
 **Card flag variant**
-1. Open page template `02-prototyping/index.html`.
-1. Go to `<div id="example-card-flag">`.
+
+1. Open `usa-card--flag.html` template.
 1. Use the code example for [Flag layout card](https://designsystem.digital.gov/components/card/#flag-layout-card) to the news section markup.
 1. Apply unstyled [list](https://designsystem.digital.gov/components/list/) component to reset list styles from the unordered list `#example-list`.
 
@@ -108,13 +130,6 @@ Prototype a page using USWDS. We're going to be using: USWDS Components, theme s
 
 1. Use the headings variant of collection component [code example](https://designsystem.digital.gov/components/collection/#component-code) to section labelled `example-collection-headers`.
 1. Apply collection calendar variant [code example](https://designsystem.digital.gov/components/collection/#component-code) to section labelled `example-collection-headers`.
-
-#### Apply & Customize layout
-
-1. Finally we're going to apply layout classes. Start at the top section labelled `example-grid-row` and apply the grid row classes.
-1. Apply layout grid classes to the `<main>` and `<aside>` elements to create a two column grid.
-1. Use [utility settings](https://designsystem.digital.gov/utilities/layout-grid/#utilities-settings) to enable the `tablet-lg` breakpoint in [`_uswds-theme.scss`].
-1. Use [responsive variants](https://designsystem.digital.gov/utilities/layout-grid/#responsive-variants-2) to define an 8-col content section and a 4-col wide sidebar with your newly enabled breakpoint.
 
 ## 03 - Theming & customization
 
