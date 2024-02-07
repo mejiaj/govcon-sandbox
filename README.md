@@ -95,8 +95,8 @@ Prototype a page using USWDS. We're going to be using: USWDS Components, theme s
     <!-- 02-prototyping/index.html -->
     <div id="example-grid-row" class="">
     ```
-1. We're going to apply layout classes. Use [grid docs](https://designsystem.digital.gov/utilities/layout-grid/) for reference. Apply the grid row classes `grid-row` and `grid-gap`.
-1. Apply layout grid classes to the `<main>` and `<aside>` elements to create a two column grid.
+1. We're going to apply grid row classes. Use [grid docs](https://designsystem.digital.gov/utilities/layout-grid/) for reference. Apply the grid row classes `grid-row` and `grid-gap`.
+1. Now we'll add grid column classes to the `<main>` and `<aside>` elements to create a two column grid.
     ```html
     <!-- 02-prototyping/index.html -->
     <main id="main-content" class="">
@@ -113,7 +113,7 @@ Prototype a page using USWDS. We're going to be using: USWDS Components, theme s
 #### Implement USA Cards
 
 **Card default**
-1. Oen `usa-card.html` template.
+1. Open the `usa-card.html` template.
 1. Use the [card component example](https://designsystem.digital.gov/components/tag/#component-code) to apply default card markup to the callout section list labelled `card-default-example`.
     ```html
     <!-- usa-card.html -->
@@ -125,7 +125,6 @@ Prototype a page using USWDS. We're going to be using: USWDS Components, theme s
 
 1. Open `usa-card--flag.html` template.
 1. Use the code example for [Flag layout card](https://designsystem.digital.gov/components/card/#flag-layout-card) to the news section markup.
-1. Apply unstyled [list](https://designsystem.digital.gov/components/list/) component to reset list styles from the unordered list `#example-list`.
 
 #### Nesting components
 
