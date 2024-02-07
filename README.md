@@ -246,7 +246,7 @@ Button doesn't offer a [setting](https://designsystem.digital.gov/components/but
 
 We'll create a custom button with a gradient background instead of a solid color. We also want to use color tokens to ensure the UI stays cohesive. Plus, as we mentioned before; color grading helps us easily manage contrast.
 
-1. Go to hero component `TK`.
+1. Go to hero component `./src/_includes/hero.html`.
 1. Add the following classes: `dgc-button dgc-button--callout`.
 1. Open styles directory `./src/_styles/components/`.
 1. Create a new partial for our custom button called `_dgc-button.scss`.
