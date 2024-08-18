@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This repo is archived. Please visit the original [USWDS Sandbox](https://github.com/uswds/uswds-sandbox) or the [Storybook Rapid Prototyping](https://github.com/Bixal/storybook-rapid-prototyping) repository.
+
 # Govcon Sandbox
 
 Based on [uswds-sandbox [GitHub]](https://github.com/uswds/uswds-sandbox). An eleventy site for rapid web prototyping and testing with the U.S. Web Design System (USWDS).
@@ -91,34 +94,36 @@ Prototype a page using USWDS. We're going to be using: USWDS Components, theme s
 
 1. Open page template `02-prototyping/index.html`.
 1. Find div with the ID `example-grid-row`.
-    ```html
-    <!-- 02-prototyping/index.html -->
-    <div id="example-grid-row" class="">
-    ```
+   ```html
+   <!-- 02-prototyping/index.html -->
+   <div id="example-grid-row" class=""></div>
+   ```
 1. We're going to apply grid row classes. Use [grid docs](https://designsystem.digital.gov/utilities/layout-grid/) for reference. Apply the grid row classes `grid-row` and `grid-gap`.
 1. Now we'll add grid column classes to the `<main>` and `<aside>` elements to create a two column grid.
-    ```html
-    <!-- 02-prototyping/index.html -->
-    <main id="main-content" class="">
 
-    <!-- Further below. -->
-    <aside id="aside-content" class="">
-    ```
+   ```html
+   <!-- 02-prototyping/index.html -->
+   <main id="main-content" class="">
+     <!-- Further below. -->
+     <aside id="aside-content" class=""></aside>
+   </main>
+   ```
+
 1. Go to theme settings file [`_uswds-theme.scss`].
 1. Use [utility settings](https://designsystem.digital.gov/utilities/layout-grid/#utilities-settings) to enable the `tablet-lg` breakpoint.
 1. Go back to the template `02-prototyping/index.html` and add responsive variants to your layout.
 1. Use [responsive variants](https://designsystem.digital.gov/utilities/layout-grid/#responsive-variants-2) to define an 8-col content section and a 4-col wide sidebar with your newly enabled breakpoint.
 
-
 #### Implement USA Cards
 
 **Card default**
+
 1. Open the `usa-card.html` template.
 1. Use the [card component example](https://designsystem.digital.gov/components/tag/#component-code) to apply default card markup to the callout section list labelled `card-default-example`.
-    ```html
-    <!-- usa-card.html -->
-    <ul id="card-default-example">
-    ```
+   ```html
+   <!-- usa-card.html -->
+   <ul id="card-default-example"></ul>
+   ```
 1. Add a utility class to change the background color (_and text color if needed_).
 
 **Card flag variant**
@@ -131,38 +136,38 @@ Prototype a page using USWDS. We're going to be using: USWDS Components, theme s
 1. In `usa-card--flag.html` line 19, there's a partial for usa-tag.
 1. Open the `usa-tag.html` template.
 1. Add the list reset styles to `example-tag-list`.
-    ```html
-    <!-- usa-tag.html -->
-    <ul id="example-tag-list" class="">
-    ```
+   ```html
+   <!-- usa-tag.html -->
+   <ul id="example-tag-list" class=""></ul>
+   ```
 1. Find the list labeled `example-tags`.
-    ```html
-    <!-- usa-tag.html -->
-    <li class="example-tags">{{ tag }}</li>
-    ```
+   ```html
+   <!-- usa-tag.html -->
+   <li class="example-tags">{{ tag }}</li>
+   ```
 1. Apply [USA Tag markup](https://designsystem.digital.gov/components/tag/#component-code) to the list item.
 
 #### Implement USA Collection
 
 1. At the bottom of `02-prototyping/index.html` you can see two collection variants. Let's fill those in next.
-    ```html
-    <!-- 02-prototyping/index.html -->
-    {% include "components/usa-collection--headings-only.html" %}
 
-    Further down…
-    {% include "components/usa-collection--calendar.html" %}
-    ```
+   ```html
+   <!-- 02-prototyping/index.html -->
+   {% include "components/usa-collection--headings-only.html" %} Further down…
+   {% include "components/usa-collection--calendar.html" %}
+   ```
+
 1. Start by going to `usa-collection--headings-only.html`.
 1. Use the headings variant of collection component [code example](https://designsystem.digital.gov/components/collection/#component-code) add the right markup/classes.
-    ```html
-    <!-- usa-collection--headings-only.html -->
-    <ul id="example-collection-headers">
-    ```
+   ```html
+   <!-- usa-collection--headings-only.html -->
+   <ul id="example-collection-headers"></ul>
+   ```
 1. Once that's looking right, head over to `usa-collection--calendar.html` to add the calendar variant. Use the [code example](https://designsystem.digital.gov/components/collection/#component-code).
-    ```html
-    <!-- usa-collection--calendar.html -->
-    <ul id="example-collection-events">
-    ```
+   ```html
+   <!-- usa-collection--calendar.html -->
+   <ul id="example-collection-events"></ul>
+   ```
 
 ## 03 - Theming & customization
 
@@ -210,28 +215,31 @@ Lets create a completely custom hero using the base `usa-hero` styles provided b
 
 1. Open hero partial at `./src/_includes/hero.html`.
 1. First, modify the `usa-hero` class to have a custom prefix to signify it's our custom component. Let's use `dgc-hero`.
-    ```html
-    <!-- hero.html -->
-    <section class="usa-hero" aria-label="Introduction">
-    ```
-1. Next, wrap the contents of  `grid-container` with a new, `grid-row` div.
-    ```html
-    <!-- hero.html -->
-    <div class="grid-container">
-      <!-- Wrap everything inside of `grid-container` with a new div. -->
-      <div class="usa-hero__callout">
-    ```
+   ```html
+   <!-- hero.html -->
+   <section class="usa-hero" aria-label="Introduction"></section>
+   ```
+1. Next, wrap the contents of `grid-container` with a new, `grid-row` div.
+   ```html
+   <!-- hero.html -->
+   <div class="grid-container">
+     <!-- Wrap everything inside of `grid-container` with a new div. -->
+     <div class="usa-hero__callout"></div>
+   </div>
+   ```
 1. Add a responsive utility classes to update the layout of our callout. Replace `usa-hero__callout` with `margin-4 tablet-lg:grid-col` utility classes.
-    ```html
-    <!-- hero.html -->
-    <div class="usa-hero__callout">
-    ```
+   ```html
+   <!-- hero.html -->
+   <div class="usa-hero__callout"></div>
+   ```
 1. Since we’re developing with accessibility in mind, you’ll find the original heading color doesn’t have proper color contrast to the white background. Add the class `text-primary-darker` to our `h1` to darken the text to our primary darker token.
 1. Add an image next to our heading text. After the next closing div, create a new div. Use the same responsive grid column class to make ensure the layout is mobile friendly.
 1. Add the following image tag in the new div:
-    ```html
-    <img src="../assets/project/img/hero/svg/undraw_online_connection_6778.svg" alt="Illustration of people connecting via web content">
-    ```
+   ```html
+   <img
+     src="../assets/project/img/hero/svg/undraw_online_connection_6778.svg"
+     alt="Illustration of people connecting via web content" />
+   ```
 1. So far we’ve created and styled this component using markup. Now we need to update the CSS. Go to `./src/_styles/components/_dgc-hero.scss`.
 1. Center align the text using `text-align: center` in the custom hero class, `dgc-hero`.
 1. Next, try the `at-media` mixin and with the `"tablet-lg"` breakpoint we’ve been using so far and set the `text-align` to `end` .**Hint:** `@include at-media("breakpoint-name") {}`.
@@ -251,34 +259,35 @@ We'll create a custom button with a gradient background instead of a solid color
 1. Open styles directory `./src/_styles/components/`.
 1. Create a new partial for our custom button called `_dgc-button.scss`.
 1. Forward this new partial in `_project-styles.scss` so styles get included.
-    ```diff
-      // _project-styles.scss
-      @forward "global/sticky-footer";
 
-      @forward "components/dgc-nav";
-      @forward "components/dgc-hero";
-      + @forward "components/dgc-button";
-    ```
-1. Add `uswds-core`  so we can access core functionality, like colors and other tokens.
-    ```scss
-      // _dgc-button.scss
-      @use "uswds-core" as *;
-    ```
+   ```diff
+     // _project-styles.scss
+     @forward "global/sticky-footer";
+
+     @forward "components/dgc-nav";
+     @forward "components/dgc-hero";
+     + @forward "components/dgc-button";
+   ```
+
+1. Add `uswds-core` so we can access core functionality, like colors and other tokens.
+   ```scss
+   // _dgc-button.scss
+   @use "uswds-core" as *;
+   ```
 1. Using any two matching color tokens; add a gradient background to `dgc-button`.
-    ```scss
-      // _dgc-button.scss
-      .dgc-button--callout {
-        background-color: color("mint-50v");
-        background-image: linear-gradient(
-          45deg,
-          #{color("mint-cool-60")} 0%,
-          #{color("mint-50v")} 45%,
-          #{color("green-warm-10v")} 100%
-        );
-      }
-    ```
+   ```scss
+   // _dgc-button.scss
+   .dgc-button--callout {
+     background-color: color("mint-50v");
+     background-image: linear-gradient(
+       45deg,
+       #{color("mint-cool-60")} 0%,
+       #{color("mint-50v")} 45%,
+       #{color("green-warm-10v")} 100%
+     );
+   }
+   ```
 1. Add a change for interactions (hover, focus, active).
-
 
 ## Resources
 
